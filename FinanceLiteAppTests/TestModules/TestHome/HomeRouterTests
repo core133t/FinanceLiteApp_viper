@@ -1,0 +1,12 @@
+//
+//  HomeRouterTests.swift
+//  FinanceLiteAppTests
+//
+//  Created by Dmitry Loginov on 23.12.2022.
+//
+
+import XCTest
+@testable import FinanceLiteApp
+
+
+

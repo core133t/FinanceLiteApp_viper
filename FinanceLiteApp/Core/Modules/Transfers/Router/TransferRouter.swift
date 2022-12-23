@@ -7,29 +7,38 @@
 
 import UIKit
 
-class TransferRouter: TransferRouterProtocol {
-    
-  static func createModule() -> UINavigationController {
+typealias TransfersInterable = TransfersPresenterProtocol & TransfersInteractorDelegate
 
-        let viewController = TransfersViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
-        let presenter: TransferPresenterProtocol & TransferInteractorDelegate = TransferPresenter()
-        viewController.presenter = presenter
-        viewController.presenter?.router = TransferRouter()
-        viewController.presenter?.view = viewController
-        viewController.presenter?.interactor = TransferInteractor()
-        viewController.presenter?.interactor?.presenter = presenter
-        return navigationController
+final class TransfersRouter: TransfersRouterProtocol {
+    
+    weak var viewController: UIViewController?
+    
+    static func createModule() -> UIViewController {
+        let service = FinanceService()
+        let interactor = TransfersInteractor(service: service)
+        let router = TransfersRouter()
+        var presenter: TransfersInterable = TransfersPresenter(
+            interactor: interactor,
+            router: router
+        )
+        let viewController = TransfersViewController(presenter: presenter)
+        
+        router.viewController = viewController
+        presenter.view = viewController
+        interactor.presenter = presenter
+        
+        return viewController
     }
     
-    func navigateToChooseContacts(controller: UIViewController) {
-        let contactsController = ContactListRouter.createModule()
-        controller.navigationController?.present(contactsController, animated: true)
+    func navigateToContactList() {
+        let viewController = ContactListRouter.createModule()
+        let navController = UINavigationController(rootViewController: viewController)
+        self.viewController?.present(navController, animated: true)
     }
     
-    func navigateToTransfer(controller: UIViewController) {
-        let confirmationViewController = ConfirmationViewController()
-        controller.navigationController?.present(confirmationViewController, animated: true)
+    func navigateToConfirmation(confirmation: ConfirmationEntity) {
+        let viewController = ConfirmationRouter.createModule(confirmation: confirmation)
+        self.viewController?.showDetailViewController(viewController, sender: self)
     }
-
+    
 }

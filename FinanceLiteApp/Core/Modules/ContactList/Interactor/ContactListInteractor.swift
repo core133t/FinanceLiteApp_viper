@@ -7,24 +7,29 @@
 
 import Foundation
 
-// MARK: - ContactListInteractorDelegate
+import Foundation
 
 protocol ContactListInteractorDelegate: AnyObject {
-    
+    func didFetchData(contactList: [ContactEntity])
 }
 
-// MARK: - ContactListInteractor
-
 final class ContactListInteractor: ContactListInteractorProtocol {
-
-    // MARK: Public Properties
-
     weak var presenter: ContactListInteractorDelegate?
+    private let service: FinanceServiceProtocol
 
-    // MARK: Public Functions
+    init(service: FinanceServiceProtocol) {
+        self.service = service
+    }
 
     func fetchData() {
-        // TODO
+        service.load(endpoint: .contactList) { [weak self] (result: Result<[ContactEntity], Error>) in
+            guard let self = self else { return }
+            switch result {
+            case .success(let list):
+                self.presenter?.didFetchData(contactList: list)
+            default: break
+            }
+        }
     }
 }
 

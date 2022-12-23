@@ -7,23 +7,23 @@
 
 import UIKit
 
-// MARK: - ActivityDetailsRouter
+typealias ActivityDetailsInterable = ActivityDetailsPresenterProtocol & ActivityDetailsInteractorDelegate
 
 final class ActivityDetailsRouter: ActivityDetailsRouterProtocol {
     
-    // MARK: Public Methods
-
     static func createModule() -> UIViewController {
-        let viewController = ActivityDetailsViewController()
+        
+        let interactor: ActivityDetailsInteractorProtocol = ActivityDetailsInteractor()
+        
+        let router: ActivityDetailsRouterProtocol = ActivityDetailsRouter()
+        
+        let presenter: ActivityDetailsInterable = ActivityDetailsPresenter(interactor: interactor, router: router)
 
-        let presenter: ActivityDetailsPresenterProtocol & ActivityDetailsInteractorDelegate = ActivityDetailsPresenter()
-
-        viewController.presenter = presenter
-        viewController.presenter?.router = ActivityDetailsRouter()
-        viewController.presenter?.view = viewController
-        viewController.presenter?.interactor = ActivityDetailsInteractor()
-        viewController.presenter?.interactor?.presenter = presenter
-
+        let viewController = ActivityDetailsViewController(presenter: presenter)
+        
+        viewController.presenter.view = viewController
+        viewController.presenter.interactor.presenter = presenter
+        
         return viewController
     }
 }

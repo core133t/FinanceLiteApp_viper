@@ -7,24 +7,21 @@
 
 import UIKit
 
-protocol TransferPresenterProtocol {
-
-    var view: TransferPresenterDelegate? { get set }
-    var interactor: TransferInteractorProtocol? { get set }
-    var router: TransferRouterProtocol? { get set }
-
-    func didPressChooseContactButton(controller: UIViewController)
-    func didPressTransferButton(controller: UIViewController)
+protocol TransfersPresenterProtocol {
+    var view: TransfersPresenterDelegate? { get set }
+    
+    func didTapTransfer(value: String)
+    func navigateToContactList()
+    func navigateToConfirmation(confirmation: ConfirmationEntity)
 }
 
-protocol TransferRouterProtocol {
-    static func createModule() -> UINavigationController
-    func navigateToTransfer(controller: UIViewController)
-    func navigateToChooseContacts(controller: UIViewController)
+protocol TransfersInteractorProtocol {
+    var presenter: TransfersInteractorDelegate? { get set }
+    func transfer(value: String)
 }
 
-protocol TransferInteractorProtocol {
-
-    var presenter: TransferInteractorDelegate? { get set }
+protocol TransfersRouterProtocol {
+    static func createModule() -> UIViewController
+    func navigateToContactList()
+    func navigateToConfirmation(confirmation: ConfirmationEntity)
 }
-

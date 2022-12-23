@@ -7,32 +7,39 @@
 
 import UIKit
 
-protocol TransferPresenterDelegate: AnyObject {
-
-    func showData()
+protocol TransfersPresenterDelegate: AnyObject {
+    func showData(transfer: TransfersEntity)
 }
 
-class TransferPresenter: TransferPresenterProtocol {
+final class TransfersPresenter: TransfersPresenterProtocol {
+    weak var view: TransfersPresenterDelegate?
+    private var interactor: TransfersInteractorProtocol
+    private var router: TransfersRouterProtocol
     
-    weak var view: TransferPresenterDelegate?
-    var interactor: TransferInteractorProtocol?
-    var router: TransferRouterProtocol?
-    
-    
-    func didPressChooseContactButton(controller: UIViewController) {
-        router?.navigateToChooseContacts(controller: controller)
+    init(
+        interactor: TransfersInteractorProtocol,
+        router: TransfersRouterProtocol
+    ) {
+        self.interactor = interactor
+        self.router = router
     }
     
-    func didPressTransferButton(controller: UIViewController) {
-        router?.navigateToTransfer(controller: controller)
+    func didTapTransfer(value: String) {
+        interactor.transfer(value: value)
+    }
+    
+    func navigateToContactList() {
+        router.navigateToContactList()
+    }
+    
+    func navigateToConfirmation(confirmation: ConfirmationEntity) {
+        router.navigateToConfirmation(confirmation: confirmation)
     }
 
 }
 
-extension TransferPresenter: TransferInteractorDelegate {
-
-    func didFetchData() {
-
-        view?.showData()
+extension TransfersPresenter: TransfersInteractorDelegate {
+    func didFetchData(transfer: TransfersEntity) {
+        view?.showData(transfer: transfer)
     }
 }

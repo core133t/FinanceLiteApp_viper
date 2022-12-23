@@ -12,10 +12,30 @@
 		D1069E592952823B005D03A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1069E572952823B005D03A4 /* Main.storyboard */; };
 		D1069E5B2952823C005D03A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1069E5A2952823C005D03A4 /* Assets.xcassets */; };
 		D1069E5E2952823C005D03A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1069E5C2952823C005D03A4 /* LaunchScreen.storyboard */; };
-		D1069E692952823C005D03A4 /* FinanceLiteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1069E682952823C005D03A4 /* FinanceLiteAppTests.swift */; };
 		D1069E732952823C005D03A4 /* FinanceLiteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1069E722952823C005D03A4 /* FinanceLiteAppUITests.swift */; };
 		D1069E752952823C005D03A4 /* FinanceLiteAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1069E742952823C005D03A4 /* FinanceLiteAppUITestsLaunchTests.swift */; };
 		D1069E962953AE99005D03A4 /* ContactListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1069E952953AE99005D03A4 /* ContactListProtocols.swift */; };
+		D1A162D72955335E000EFE77 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162D62955335E000EFE77 /* HomePresenterTests.swift */; };
+		D1A162DD29553423000EFE77 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162DC29553423000EFE77 /* HomeViewControllerTests.swift */; };
+		D1A162DF2955398E000EFE77 /* HomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162DE2955398E000EFE77 /* HomeRouterTests.swift */; };
+		D1A162E22955519F000EFE77 /* ContactListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162E12955519F000EFE77 /* ContactListEntity.swift */; };
+		D1A162E829555247000EFE77 /* ConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162E729555247000EFE77 /* ConfirmationPresenter.swift */; };
+		D1A162EA29555266000EFE77 /* ConfirmationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162E929555266000EFE77 /* ConfirmationInteractor.swift */; };
+		D1A162EC29555283000EFE77 /* ConfirmationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162EB29555283000EFE77 /* ConfirmationRouter.swift */; };
+		D1A162EE295552A5000EFE77 /* ConfirmationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162ED295552A5000EFE77 /* ConfirmationEntity.swift */; };
+		D1A162F0295552C7000EFE77 /* ConfirmationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162EF295552C7000EFE77 /* ConfirmationProtocols.swift */; };
+		D1A162F329555377000EFE77 /* TransferEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162F229555377000EFE77 /* TransferEntity.swift */; };
+		D1A162F9295553EF000EFE77 /* AccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162F8295553EF000EFE77 /* AccountEntity.swift */; };
+		D1A162FB29555407000EFE77 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162FA29555407000EFE77 /* UserEntity.swift */; };
+		D1A162FD29555429000EFE77 /* UserProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162FC29555429000EFE77 /* UserProfileRouter.swift */; };
+		D1A162FF29555449000EFE77 /* UserProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162FE29555449000EFE77 /* UserProfilePresenter.swift */; };
+		D1A163012955547D000EFE77 /* UserProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A163002955547D000EFE77 /* UserProfileInteractor.swift */; };
+		D1A16303295554A3000EFE77 /* UserProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A16302295554A3000EFE77 /* UserProfileProtocols.swift */; };
+		D1A16306295555A5000EFE77 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A16305295555A5000EFE77 /* HomeEntity.swift */; };
+		D1A1630929555B14000EFE77 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1630829555B14000EFE77 /* HomeInteractorTests.swift */; };
+		D1A1630C29555B72000EFE77 /* TransferPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1630B29555B72000EFE77 /* TransferPresenterTest.swift */; };
+		D1A1630E29555B9B000EFE77 /* TransferInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1630D29555B9B000EFE77 /* TransferInteractorTest.swift */; };
+		D1A1631029555C4B000EFE77 /* TransferViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1630F29555C4B000EFE77 /* TransferViewControllerTest.swift */; };
 		D1A7D34B2953EE5F00563FC4 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34A2953EE5F00563FC4 /* ContactListView.swift */; };
 		D1A7D34D2953EE9E00563FC4 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34C2953EE9E00563FC4 /* ContactListViewController.swift */; };
 		D1A7D34F2953EED100563FC4 /* ContactListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34E2953EED100563FC4 /* ContactListInteractor.swift */; };
@@ -34,7 +54,6 @@
 		D1A7D3762953F3EF00563FC4 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3752953F3EF00563FC4 /* HomeInteractor.swift */; };
 		D1A7D3782953F49500563FC4 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3772953F49500563FC4 /* HomePresenter.swift */; };
 		D1A7D37A2953F4B900563FC4 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3792953F4B900563FC4 /* HomeRouter.swift */; };
-		D1A7D37C2953F4E100563FC4 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D37B2953F4E100563FC4 /* HomeData.swift */; };
 		D1A7D37E2953F50600563FC4 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D37D2953F50600563FC4 /* HomeProtocols.swift */; };
 		D1A7D3822953F5BF00563FC4 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3812953F5BF00563FC4 /* UserProfileView.swift */; };
 		D1A7D3842953F60200563FC4 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3832953F60200563FC4 /* UserProfileViewController.swift */; };
@@ -45,26 +64,19 @@
 		D1A7D3942953F89200563FC4 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3932953F89200563FC4 /* ActivityData.swift */; };
 		D1A7D3962953F8B900563FC4 /* ActivityDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3952953F8B900563FC4 /* ActivityDetailRouter.swift */; };
 		D1A7D3982953F8E400563FC4 /* ActivityDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3972953F8E400563FC4 /* ActivityDetailProtocols.swift */; };
-		D1A7D39B2953F95D00563FC4 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D39A2953F95D00563FC4 /* HomeRepository.swift */; };
-		D1A7D39D2953F99100563FC4 /* ActivityDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D39C2953F99100563FC4 /* ActivityDetailRepository.swift */; };
 		D1A7D3A32953FBF800563FC4 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3A22953FBF800563FC4 /* HTTPClient.swift */; };
 		D1A7D3A52953FC1F00563FC4 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3A42953FC1F00563FC4 /* RequestError.swift */; };
-		D1A7D3A72953FC3F00563FC4 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3A62953FC3F00563FC4 /* RequestMethod.swift */; };
 		D1A7D3A92953FC6D00563FC4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3A82953FC6D00563FC4 /* Endpoint.swift */; };
-		D1A7D3AB2953FC9000563FC4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3AA2953FC9000563FC4 /* Constants.swift */; };
-		D1A7D3AE2953FD1A00563FC4 /* FinanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3AD2953FD1A00563FC4 /* FinanceService.swift */; };
-		D1A7D3B02953FD4600563FC4 /* FinanceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3AF2953FD4600563FC4 /* FinanceEndpoint.swift */; };
-		D1A7D3B32953FD9200563FC4 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3B22953FD9200563FC4 /* HomeService.swift */; };
-		D1A7D3B52953FDAC00563FC4 /* HomeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3B42953FDAC00563FC4 /* HomeEndpoint.swift */; };
-		D1A7D3B82953FE5400563FC4 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3B72953FE5400563FC4 /* DoubleExtension.swift */; };
-		D1A7D3BA2953FE7B00563FC4 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3B92953FE7B00563FC4 /* UIViewControllerExtension.swift */; };
-		D1A7D3BC2953FE9F00563FC4 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3BB2953FE9F00563FC4 /* CollectionExtension.swift */; };
 		D1A7D3BF2953FF0300563FC4 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3BE2953FF0300563FC4 /* HomeHeaderView.swift */; };
 		D1A7D3C12953FF6100563FC4 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3C02953FF6100563FC4 /* HomeTabBarController.swift */; };
 		D1A7D3C52953FFD900563FC4 /* ActivityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3C42953FFD900563FC4 /* ActivityCellView.swift */; };
 		D1A7D3C72953FFF900563FC4 /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3C62953FFF900563FC4 /* ActivityListView.swift */; };
 		D1A7D3CA2954006500563FC4 /* ContactListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3C92954006500563FC4 /* ContactListCellView.swift */; };
 		D1A7D3CD295400B100563FC4 /* UserProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3CC295400B100563FC4 /* UserProfileHeaderView.swift */; };
+		D1A7D3D4295411C900563FC4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3D3295411C900563FC4 /* SplashViewController.swift */; };
+		D1A7D3D62954128A00563FC4 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3D52954128A00563FC4 /* SplashInteractor.swift */; };
+		D1A7D3D8295412E300563FC4 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3D7295412E300563FC4 /* SplashPresenter.swift */; };
+		D1A7D3DA2954131F00563FC4 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3D92954131F00563FC4 /* SplashRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,11 +105,31 @@
 		D1069E5D2952823C005D03A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1069E5F2952823C005D03A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1069E642952823C005D03A4 /* FinanceLiteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinanceLiteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1069E682952823C005D03A4 /* FinanceLiteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceLiteAppTests.swift; sourceTree = "<group>"; };
 		D1069E6E2952823C005D03A4 /* FinanceLiteAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinanceLiteAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1069E722952823C005D03A4 /* FinanceLiteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceLiteAppUITests.swift; sourceTree = "<group>"; };
 		D1069E742952823C005D03A4 /* FinanceLiteAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceLiteAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D1069E952953AE99005D03A4 /* ContactListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListProtocols.swift; sourceTree = "<group>"; };
+		D1A162D62955335E000EFE77 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		D1A162DC29553423000EFE77 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		D1A162DE2955398E000EFE77 /* HomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterTests.swift; sourceTree = "<group>"; };
+		D1A162E12955519F000EFE77 /* ContactListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListEntity.swift; sourceTree = "<group>"; };
+		D1A162E729555247000EFE77 /* ConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPresenter.swift; sourceTree = "<group>"; };
+		D1A162E929555266000EFE77 /* ConfirmationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInteractor.swift; sourceTree = "<group>"; };
+		D1A162EB29555283000EFE77 /* ConfirmationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationRouter.swift; sourceTree = "<group>"; };
+		D1A162ED295552A5000EFE77 /* ConfirmationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationEntity.swift; sourceTree = "<group>"; };
+		D1A162EF295552C7000EFE77 /* ConfirmationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationProtocols.swift; sourceTree = "<group>"; };
+		D1A162F229555377000EFE77 /* TransferEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferEntity.swift; sourceTree = "<group>"; };
+		D1A162F8295553EF000EFE77 /* AccountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEntity.swift; sourceTree = "<group>"; };
+		D1A162FA29555407000EFE77 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		D1A162FC29555429000EFE77 /* UserProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileRouter.swift; sourceTree = "<group>"; };
+		D1A162FE29555449000EFE77 /* UserProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePresenter.swift; sourceTree = "<group>"; };
+		D1A163002955547D000EFE77 /* UserProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInteractor.swift; sourceTree = "<group>"; };
+		D1A16302295554A3000EFE77 /* UserProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileProtocols.swift; sourceTree = "<group>"; };
+		D1A16305295555A5000EFE77 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		D1A1630829555B14000EFE77 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
+		D1A1630B29555B72000EFE77 /* TransferPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferPresenterTest.swift; sourceTree = "<group>"; };
+		D1A1630D29555B9B000EFE77 /* TransferInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferInteractorTest.swift; sourceTree = "<group>"; };
+		D1A1630F29555C4B000EFE77 /* TransferViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewControllerTest.swift; sourceTree = "<group>"; };
 		D1A7D34A2953EE5F00563FC4 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		D1A7D34C2953EE9E00563FC4 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		D1A7D34E2953EED100563FC4 /* ContactListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListInteractor.swift; sourceTree = "<group>"; };
@@ -116,7 +148,6 @@
 		D1A7D3752953F3EF00563FC4 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		D1A7D3772953F49500563FC4 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		D1A7D3792953F4B900563FC4 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		D1A7D37B2953F4E100563FC4 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		D1A7D37D2953F50600563FC4 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		D1A7D3812953F5BF00563FC4 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		D1A7D3832953F60200563FC4 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
@@ -127,26 +158,19 @@
 		D1A7D3932953F89200563FC4 /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
 		D1A7D3952953F8B900563FC4 /* ActivityDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailRouter.swift; sourceTree = "<group>"; };
 		D1A7D3972953F8E400563FC4 /* ActivityDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailProtocols.swift; sourceTree = "<group>"; };
-		D1A7D39A2953F95D00563FC4 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		D1A7D39C2953F99100563FC4 /* ActivityDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailRepository.swift; sourceTree = "<group>"; };
 		D1A7D3A22953FBF800563FC4 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		D1A7D3A42953FC1F00563FC4 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
-		D1A7D3A62953FC3F00563FC4 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		D1A7D3A82953FC6D00563FC4 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		D1A7D3AA2953FC9000563FC4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D1A7D3AD2953FD1A00563FC4 /* FinanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceService.swift; sourceTree = "<group>"; };
-		D1A7D3AF2953FD4600563FC4 /* FinanceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceEndpoint.swift; sourceTree = "<group>"; };
-		D1A7D3B22953FD9200563FC4 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
-		D1A7D3B42953FDAC00563FC4 /* HomeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpoint.swift; sourceTree = "<group>"; };
-		D1A7D3B72953FE5400563FC4 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
-		D1A7D3B92953FE7B00563FC4 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		D1A7D3BB2953FE9F00563FC4 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		D1A7D3BE2953FF0300563FC4 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		D1A7D3C02953FF6100563FC4 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		D1A7D3C42953FFD900563FC4 /* ActivityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCellView.swift; sourceTree = "<group>"; };
 		D1A7D3C62953FFF900563FC4 /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
 		D1A7D3C92954006500563FC4 /* ContactListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListCellView.swift; sourceTree = "<group>"; };
 		D1A7D3CC295400B100563FC4 /* UserProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeaderView.swift; sourceTree = "<group>"; };
+		D1A7D3D3295411C900563FC4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D1A7D3D52954128A00563FC4 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		D1A7D3D7295412E300563FC4 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		D1A7D3D92954131F00563FC4 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,7 +224,6 @@
 				D1069E812953A7FA005D03A4 /* Core */,
 				D1A7D39F2953FB7C00563FC4 /* Service */,
 				D1A7D39E2953FB5800563FC4 /* Resources */,
-				D1A7D3B62953FE2500563FC4 /* Extensions */,
 				D1069E572952823B005D03A4 /* Main.storyboard */,
 				D1069E5A2952823C005D03A4 /* Assets.xcassets */,
 				D1069E5C2952823C005D03A4 /* LaunchScreen.storyboard */,
@@ -212,7 +235,7 @@
 		D1069E672952823C005D03A4 /* FinanceLiteAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				D1069E682952823C005D03A4 /* FinanceLiteAppTests.swift */,
+				D1A162D429553315000EFE77 /* TestModules */,
 			);
 			path = FinanceLiteAppTests;
 			sourceTree = "<group>";
@@ -229,7 +252,6 @@
 		D1069E812953A7FA005D03A4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D1A7D3992953F93F00563FC4 /* Repository */,
 				D1069E842953A872005D03A4 /* Delegates */,
 				D1069E822953A83C005D03A4 /* Modules */,
 			);
@@ -239,6 +261,7 @@
 		D1069E822953A83C005D03A4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D1A7D3CE2954116600563FC4 /* Splash */,
 				D1A7D3852953F6C900563FC4 /* ActivityDetail */,
 				D1A7D37F2953F59600563FC4 /* UserProfile */,
 				D1A7D36B2953F2CB00563FC4 /* Home */,
@@ -261,6 +284,7 @@
 		D1069E852953AC6E005D03A4 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				D1A162E02955517B000EFE77 /* Entity */,
 				D1069E952953AE99005D03A4 /* ContactListProtocols.swift */,
 				D1A7D3492953EE3F00563FC4 /* View */,
 				D1A7D3482953EE1D00563FC4 /* Interactor */,
@@ -268,6 +292,117 @@
 				D1A7D3462953EDAE00563FC4 /* Router */,
 			);
 			path = ContactList;
+			sourceTree = "<group>";
+		};
+		D1A162D429553315000EFE77 /* TestModules */ = {
+			isa = PBXGroup;
+			children = (
+				D1A1630A29555B42000EFE77 /* TestTransfer */,
+				D1A162D52955332E000EFE77 /* TestHome */,
+			);
+			path = TestModules;
+			sourceTree = "<group>";
+		};
+		D1A162D52955332E000EFE77 /* TestHome */ = {
+			isa = PBXGroup;
+			children = (
+				D1A162DC29553423000EFE77 /* HomeViewControllerTests.swift */,
+				D1A162D62955335E000EFE77 /* HomePresenterTests.swift */,
+				D1A162DE2955398E000EFE77 /* HomeRouterTests.swift */,
+				D1A1630829555B14000EFE77 /* HomeInteractorTests.swift */,
+			);
+			path = TestHome;
+			sourceTree = "<group>";
+		};
+		D1A162E02955517B000EFE77 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D1A162E12955519F000EFE77 /* ContactListEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D1A162E3295551FB000EFE77 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D1A162E729555247000EFE77 /* ConfirmationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D1A162E429555207000EFE77 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D1A162E929555266000EFE77 /* ConfirmationInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D1A162E529555218000EFE77 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D1A162EB29555283000EFE77 /* ConfirmationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D1A162E629555223000EFE77 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D1A162ED295552A5000EFE77 /* ConfirmationEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D1A162F129555365000EFE77 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D1A162F229555377000EFE77 /* TransferEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D1A162F4295553AD000EFE77 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D1A163002955547D000EFE77 /* UserProfileInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D1A162F5295553BC000EFE77 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D1A162FE29555449000EFE77 /* UserProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D1A162F6295553C6000EFE77 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D1A162FC29555429000EFE77 /* UserProfileRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D1A162F7295553D5000EFE77 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D1A162F8295553EF000EFE77 /* AccountEntity.swift */,
+				D1A162FA29555407000EFE77 /* UserEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D1A1630A29555B42000EFE77 /* TestTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				D1A1630B29555B72000EFE77 /* TransferPresenterTest.swift */,
+				D1A1630D29555B9B000EFE77 /* TransferInteractorTest.swift */,
+				D1A1630F29555C4B000EFE77 /* TransferViewControllerTest.swift */,
+			);
+			path = TestTransfer;
 			sourceTree = "<group>";
 		};
 		D1A7D3462953EDAE00563FC4 /* Router */ = {
@@ -307,6 +442,11 @@
 		D1A7D3542953EF9900563FC4 /* Confirmation */ = {
 			isa = PBXGroup;
 			children = (
+				D1A162EF295552C7000EFE77 /* ConfirmationProtocols.swift */,
+				D1A162E629555223000EFE77 /* Entity */,
+				D1A162E529555218000EFE77 /* Router */,
+				D1A162E429555207000EFE77 /* Interactor */,
+				D1A162E3295551FB000EFE77 /* Presenter */,
 				D1A7D3572953EFC300563FC4 /* View */,
 			);
 			path = Confirmation;
@@ -325,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A7D3692953F1DB00563FC4 /* TransferProtocols.swift */,
+				D1A162F129555365000EFE77 /* Entity */,
 				D1A7D35E2953F09100563FC4 /* View */,
 				D1A7D35D2953F08100563FC4 /* Interactor */,
 				D1A7D35C2953F07200563FC4 /* Presenter */,
@@ -416,7 +557,7 @@
 		D1A7D3702953F33B00563FC4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				D1A7D37B2953F4E100563FC4 /* HomeData.swift */,
+				D1A16305295555A5000EFE77 /* HomeEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -424,6 +565,11 @@
 		D1A7D37F2953F59600563FC4 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
+				D1A16302295554A3000EFE77 /* UserProfileProtocols.swift */,
+				D1A162F7295553D5000EFE77 /* Entity */,
+				D1A162F6295553C6000EFE77 /* Router */,
+				D1A162F5295553BC000EFE77 /* Presenter */,
+				D1A162F4295553AD000EFE77 /* Interactor */,
 				D1A7D3802953F5A700563FC4 /* View */,
 			);
 			path = UserProfile;
@@ -494,15 +640,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		D1A7D3992953F93F00563FC4 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				D1A7D39A2953F95D00563FC4 /* HomeRepository.swift */,
-				D1A7D39C2953F99100563FC4 /* ActivityDetailRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
 		D1A7D39E2953FB5800563FC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,8 +650,6 @@
 		D1A7D39F2953FB7C00563FC4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				D1A7D3B12953FD8500563FC4 /* Home */,
-				D1A7D3AC2953FCFE00563FC4 /* Finance */,
 				D1A7D3A02953FBB900563FC4 /* NetworkManager */,
 				D1A7D3A12953FBDB00563FC4 /* DataManager */,
 			);
@@ -526,9 +661,7 @@
 			children = (
 				D1A7D3A22953FBF800563FC4 /* HTTPClient.swift */,
 				D1A7D3A42953FC1F00563FC4 /* RequestError.swift */,
-				D1A7D3A62953FC3F00563FC4 /* RequestMethod.swift */,
 				D1A7D3A82953FC6D00563FC4 /* Endpoint.swift */,
-				D1A7D3AA2953FC9000563FC4 /* Constants.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -538,34 +671,6 @@
 			children = (
 			);
 			path = DataManager;
-			sourceTree = "<group>";
-		};
-		D1A7D3AC2953FCFE00563FC4 /* Finance */ = {
-			isa = PBXGroup;
-			children = (
-				D1A7D3AD2953FD1A00563FC4 /* FinanceService.swift */,
-				D1A7D3AF2953FD4600563FC4 /* FinanceEndpoint.swift */,
-			);
-			path = Finance;
-			sourceTree = "<group>";
-		};
-		D1A7D3B12953FD8500563FC4 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				D1A7D3B22953FD9200563FC4 /* HomeService.swift */,
-				D1A7D3B42953FDAC00563FC4 /* HomeEndpoint.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		D1A7D3B62953FE2500563FC4 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				D1A7D3B72953FE5400563FC4 /* DoubleExtension.swift */,
-				D1A7D3B92953FE7B00563FC4 /* UIViewControllerExtension.swift */,
-				D1A7D3BB2953FE9F00563FC4 /* CollectionExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D1A7D3BD2953FED000563FC4 /* SubView */ = {
@@ -608,6 +713,49 @@
 				D1A7D3CC295400B100563FC4 /* UserProfileHeaderView.swift */,
 			);
 			path = SubView;
+			sourceTree = "<group>";
+		};
+		D1A7D3CE2954116600563FC4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D1A7D3D2295411A400563FC4 /* View */,
+				D1A7D3D12954119600563FC4 /* Interactor */,
+				D1A7D3D02954117B00563FC4 /* Presenter */,
+				D1A7D3CF2954117200563FC4 /* Router */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		D1A7D3CF2954117200563FC4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D1A7D3D92954131F00563FC4 /* SplashRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D1A7D3D02954117B00563FC4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D1A7D3D7295412E300563FC4 /* SplashPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D1A7D3D12954119600563FC4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D1A7D3D52954128A00563FC4 /* SplashInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D1A7D3D2295411A400563FC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1A7D3D3295411C900563FC4 /* SplashViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -741,54 +889,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A7D3B32953FD9200563FC4 /* HomeService.swift in Sources */,
+				D1A162F329555377000EFE77 /* TransferEntity.swift in Sources */,
 				D1A7D3C72953FFF900563FC4 /* ActivityListView.swift in Sources */,
 				D1A7D3C52953FFD900563FC4 /* ActivityCellView.swift in Sources */,
 				D1069E522952823B005D03A4 /* AppDelegate.swift in Sources */,
-				D1A7D3BA2953FE7B00563FC4 /* UIViewControllerExtension.swift in Sources */,
 				D1A7D3842953F60200563FC4 /* UserProfileViewController.swift in Sources */,
+				D1A162FD29555429000EFE77 /* UserProfileRouter.swift in Sources */,
+				D1A162EA29555266000EFE77 /* ConfirmationInteractor.swift in Sources */,
+				D1A162FB29555407000EFE77 /* UserEntity.swift in Sources */,
 				D1A7D37E2953F50600563FC4 /* HomeProtocols.swift in Sources */,
 				D1A7D38E2953F7FF00563FC4 /* ActivityDetailViewController.swift in Sources */,
 				D1A7D3762953F3EF00563FC4 /* HomeInteractor.swift in Sources */,
+				D1A7D3DA2954131F00563FC4 /* SplashRouter.swift in Sources */,
+				D1A16303295554A3000EFE77 /* UserProfileProtocols.swift in Sources */,
 				D1A7D34D2953EE9E00563FC4 /* ContactListViewController.swift in Sources */,
+				D1A162EE295552A5000EFE77 /* ConfirmationEntity.swift in Sources */,
 				D1A7D3CD295400B100563FC4 /* UserProfileHeaderView.swift in Sources */,
 				D1A7D3782953F49500563FC4 /* HomePresenter.swift in Sources */,
 				D1069E962953AE99005D03A4 /* ContactListProtocols.swift in Sources */,
 				D1A7D3A52953FC1F00563FC4 /* RequestError.swift in Sources */,
 				D1A7D3532953EF4B00563FC4 /* ContactListRouter.swift in Sources */,
 				D1A7D3642953F14C00563FC4 /* TransferInteractor.swift in Sources */,
-				D1A7D3B02953FD4600563FC4 /* FinanceEndpoint.swift in Sources */,
 				D1A7D3CA2954006500563FC4 /* ContactListCellView.swift in Sources */,
+				D1A16306295555A5000EFE77 /* HomeEntity.swift in Sources */,
+				D1A162FF29555449000EFE77 /* UserProfilePresenter.swift in Sources */,
 				D1A7D3C12953FF6100563FC4 /* HomeTabBarController.swift in Sources */,
-				D1A7D3B52953FDAC00563FC4 /* HomeEndpoint.swift in Sources */,
-				D1A7D39B2953F95D00563FC4 /* HomeRepository.swift in Sources */,
 				D1A7D3A92953FC6D00563FC4 /* Endpoint.swift in Sources */,
 				D1A7D3742953F3BD00563FC4 /* HomeViewController.swift in Sources */,
 				D1A7D3722953F3A000563FC4 /* HomeView.swift in Sources */,
 				D1A7D3902953F84400563FC4 /* ActivityDetailInteractor.swift in Sources */,
 				D1A7D3962953F8B900563FC4 /* ActivityDetailRouter.swift in Sources */,
+				D1A163012955547D000EFE77 /* UserProfileInteractor.swift in Sources */,
+				D1A7D3D8295412E300563FC4 /* SplashPresenter.swift in Sources */,
 				D1A7D3682953F1A700563FC4 /* TransferRouter.swift in Sources */,
 				D1A7D38C2953F76800563FC4 /* ActivityDetailView.swift in Sources */,
-				D1A7D37C2953F4E100563FC4 /* HomeData.swift in Sources */,
-				D1A7D3AB2953FC9000563FC4 /* Constants.swift in Sources */,
+				D1A162F0295552C7000EFE77 /* ConfirmationProtocols.swift in Sources */,
 				D1A7D3592953F00000563FC4 /* ConfirmationViewController.swift in Sources */,
 				D1A7D34F2953EED100563FC4 /* ContactListInteractor.swift in Sources */,
 				D1A7D3512953EF0200563FC4 /* ContactListPresenter.swift in Sources */,
 				D1A7D3622953F0FB00563FC4 /* TransferViewController.swift in Sources */,
 				D1A7D3662953F17F00563FC4 /* TransferPresenter.swift in Sources */,
+				D1A162E22955519F000EFE77 /* ContactListEntity.swift in Sources */,
 				D1A7D3BF2953FF0300563FC4 /* HomeHeaderView.swift in Sources */,
 				D1069E542952823B005D03A4 /* SceneDelegate.swift in Sources */,
 				D1A7D37A2953F4B900563FC4 /* HomeRouter.swift in Sources */,
-				D1A7D3AE2953FD1A00563FC4 /* FinanceService.swift in Sources */,
-				D1A7D3BC2953FE9F00563FC4 /* CollectionExtension.swift in Sources */,
-				D1A7D3A72953FC3F00563FC4 /* RequestMethod.swift in Sources */,
+				D1A7D3D4295411C900563FC4 /* SplashViewController.swift in Sources */,
 				D1A7D3822953F5BF00563FC4 /* UserProfileView.swift in Sources */,
 				D1A7D3942953F89200563FC4 /* ActivityData.swift in Sources */,
-				D1A7D39D2953F99100563FC4 /* ActivityDetailRepository.swift in Sources */,
-				D1A7D3B82953FE5400563FC4 /* DoubleExtension.swift in Sources */,
+				D1A162EC29555283000EFE77 /* ConfirmationRouter.swift in Sources */,
+				D1A162E829555247000EFE77 /* ConfirmationPresenter.swift in Sources */,
 				D1A7D36A2953F1DB00563FC4 /* TransferProtocols.swift in Sources */,
+				D1A162F9295553EF000EFE77 /* AccountEntity.swift in Sources */,
 				D1A7D3562953EFBB00563FC4 /* ConfirmationView.swift in Sources */,
 				D1A7D34B2953EE5F00563FC4 /* ContactListView.swift in Sources */,
+				D1A7D3D62954128A00563FC4 /* SplashInteractor.swift in Sources */,
 				D1A7D3A32953FBF800563FC4 /* HTTPClient.swift in Sources */,
 				D1A7D3982953F8E400563FC4 /* ActivityDetailProtocols.swift in Sources */,
 				D1A7D3922953F86400563FC4 /* ActivityDetailPresenter.swift in Sources */,
@@ -800,7 +954,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1069E692952823C005D03A4 /* FinanceLiteAppTests.swift in Sources */,
+				D1A162DF2955398E000EFE77 /* HomeRouterTests.swift in Sources */,
+				D1A1631029555C4B000EFE77 /* TransferViewControllerTest.swift in Sources */,
+				D1A1630E29555B9B000EFE77 /* TransferInteractorTest.swift in Sources */,
+				D1A162D72955335E000EFE77 /* HomePresenterTests.swift in Sources */,
+				D1A162DD29553423000EFE77 /* HomeViewControllerTests.swift in Sources */,
+				D1A1630C29555B72000EFE77 /* TransferPresenterTest.swift in Sources */,
+				D1A1630929555B14000EFE77 /* HomeInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

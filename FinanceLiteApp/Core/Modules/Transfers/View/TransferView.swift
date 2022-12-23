@@ -7,17 +7,20 @@
 
 import UIKit
 
+import UIKit
+
 protocol TransferViewDelegate: AnyObject {
     
     func didPressChooseContactButton()
     func didPressTransferButton()
+    func didAmountChange(value: String)
 }
 
-class TransfersView: UIView {
+final class TransfersView: UIView {
     
     weak var delegate: TransferViewDelegate?
     
-    let stackView: UIStackView = {
+    private let stackView: UIStackView = {
         
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,17 +30,17 @@ class TransfersView: UIView {
         return stackView
     }()
     
-    let amountTextField: UITextField = {
+    private let amountTextField: UITextField = {
         
         let textField = UITextField()
         textField.placeholder = "$0"
         textField.font = UIFont.boldSystemFont(ofSize: 34)
         textField.textAlignment = .center
-        textField.keyboardType = .numbersAndPunctuation
+        textField.keyboardType = .decimalPad
         return textField
     }()
     
-    let chooseContactButton: UIButton = {
+    private let chooseContactButton: UIButton = {
         
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +50,7 @@ class TransfersView: UIView {
         return button
     }()
     
-    let transferButton: UIButton = {
+    private let transferButton: UIButton = {
         
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -59,9 +62,9 @@ class TransfersView: UIView {
         return button
     }()
     
-    init() {
+    init(amountDidChange: ((String) -> Void)? = nil) {
         super.init(frame: .zero)
-        
+
         backgroundColor = .white
         
         stackView.addArrangedSubview(amountTextField)
@@ -79,6 +82,8 @@ class TransfersView: UIView {
             transferButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
             transferButton.heightAnchor.constraint(equalToConstant: 56)
         ])
+
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextField.textDidChangeNotification, object: nil)
     }
     
     @objc
@@ -91,7 +96,15 @@ class TransfersView: UIView {
         delegate?.didPressTransferButton()
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension TransfersView {
+    @objc private func textDidChange() {
+        guard let value = amountTextField.text else { return }
+        delegate?.didAmountChange(value: value)
     }
 }

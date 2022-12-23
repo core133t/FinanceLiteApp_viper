@@ -7,46 +7,31 @@
 
 import Foundation
 
-// MARK: - ActivityDetailsPresenterDelegate
-
 protocol ActivityDetailsPresenterDelegate: AnyObject {
-    func showData(_ activity: Activity)
-    func showError(message: String)
+    
+    func showData()
 }
-
-// MARK: - ActivityDetailsPresenter
 
 final class ActivityDetailsPresenter: ActivityDetailsPresenterProtocol {
     
-    // MARK: Public Properties
-
     weak var view: ActivityDetailsPresenterDelegate?
-    var interactor: ActivityDetailsInteractorProtocol?
-    var router: ActivityDetailsRouterProtocol?
+    var interactor: ActivityDetailsInteractorProtocol
+    var router: ActivityDetailsRouterProtocol
     
-    // MARK: Public Methods
-
+    init(interactor: ActivityDetailsInteractorProtocol, router: ActivityDetailsRouterProtocol) {
+        self.interactor = interactor
+        self.router = router
+    }
+    
     func viewDidLoad() {
-        interactor?.fetchData()
+        interactor.fetchData()
     }
 }
 
-// MARK: - ActivityDetailsInteractorDelegate
-
 extension ActivityDetailsPresenter: ActivityDetailsInteractorDelegate {
-    func didFailFetchActivity(error: ActivityDetailError?) {
-        guard let error = error else {
-            view?.showError(message: "Unknown error.")
-            return
-        }
-        switch error {
-        case .invalidID:
-            view?.showError(message: "Invalid ID for Activity.")
-        }
-    }
     
-    func didFetchActivity(_ activity: Activity) {
-        view?.showData(activity)
+    func didFetchData() {
+        view?.showData()
     }
 }
 

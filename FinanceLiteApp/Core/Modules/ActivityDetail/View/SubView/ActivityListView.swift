@@ -14,12 +14,6 @@ protocol ActivityListViewDelegate: AnyObject {
 
 class ActivityListView: UIView {
 
-    var items: [Activity] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
     weak var delegate: ActivityListViewDelegate?
 
     static let cellSize = CGFloat(82)
@@ -73,18 +67,13 @@ extension ActivityListView {
 extension ActivityListView: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+
+        return 5
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ActivityCellView
-        
-        guard let activity = items[safe: indexPath.row] else {
-            return cell
-        }
-        
-        cell.setupWithActivity(activity)
 
         return cell
     }
@@ -102,3 +91,4 @@ extension ActivityListView: UITableViewDelegate {
         delegate?.didSelectedActivity()
     }
 }
+

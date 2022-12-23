@@ -7,26 +7,23 @@
 
 import UIKit
 
-// MARK: - HomePresenterProtocol
-
 protocol HomePresenterProtocol {
     var view: HomePresenterDelegate? { get set }
-    var interactor: HomeIteractorProtocol? { get set }
-    var router: HomeRouterProtocol? { get set }
+    var interactor: HomeInteractorProtocol { get set }
+    var router: HomeRouterProtocol { get set }
     
     func viewDidLoad()
+    func navigateToActivity()
+    func navigateToUserProfile()
 }
-
-// MARK: - HomeRouterProtocol
 
 protocol HomeRouterProtocol {
     static func createModule() -> UIViewController
+    func navigateToActivity()
+    func navigateToUserProfile()
 }
 
-// MARK: - HomeIteractorProtocol
-
-protocol HomeIteractorProtocol {
+protocol HomeInteractorProtocol {
     var presenter: HomeInteractorDelegate? { get set }
-    
-    func fetchData()
+    func didFetchData()
 }

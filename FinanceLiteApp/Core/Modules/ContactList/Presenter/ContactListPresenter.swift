@@ -7,31 +7,31 @@
 
 import Foundation
 
-// MARK: - ContactListPresenterDelegate
-
 protocol ContactListPresenterDelegate: AnyObject {
-    
+    func showData(_ contactList: [ContactEntity])
 }
-
-// MARK: - ContactListPresenter
 
 final class ContactListPresenter: ContactListPresenterProtocol {
     
-    // MARK: Public Properties
-    
     weak var view: ContactListPresenterDelegate?
-    var interactor: ContactListInteractorProtocol?
-    var router: ContactListRouterProtocol?
+    var interactor: ContactListInteractorProtocol
+    var router: ContactListRouterProtocol
     
-    // MARK: Public Methods
-
+    init(
+        interactor: ContactListInteractorProtocol,
+        router: ContactListRouterProtocol
+    ) {
+        self.interactor = interactor
+        self.router = router
+    }
+    
     func viewDidLoad() {
-        
+        interactor.fetchData()
     }
 }
 
-// MARK: - ContactListInteractorDelegate
 extension ContactListPresenter: ContactListInteractorDelegate {
-    
+    func didFetchData(contactList: [ContactEntity]) {
+        view?.showData(contactList)
+    }
 }
-

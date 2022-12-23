@@ -7,24 +7,9 @@
 
 import Foundation
 
-protocol Endpoint {
-    var baseURL: String { get }
-    var path: String { get }
-    var method: RequestMethod { get }
-    var header: [String: String]? { get }
-    var body: [String: String]? { get }
-}
-
-extension Endpoint {
-    var baseURL: String {
-        return Constants.baseURL
-    }
-    
-    var header: [String: String]? {
-        return nil
-    }
-
-    var body: [String: String]? {
-        return nil
-    }
+enum FinanceEndpoint: String {
+    case home = "home_endpoint"
+    case contactList = "contact_list_endpoint"
+    case userProfile = "user_profile_endpoint"
+    case transfer = "transfer_successful_endpoint"
 }

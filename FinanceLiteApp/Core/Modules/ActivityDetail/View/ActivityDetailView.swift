@@ -8,22 +8,21 @@
 
 import UIKit
 
-// MARK: - ActivityDetailsView
-
 final class ActivityDetailsView: UIView {
 
-    // MARK: Views
+    let stackView: UIStackView = {
 
-    private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 8
         stackView.distribution = .fill
+        
         return stackView
     }()
 
-    private lazy var imageView: UIImageView = {
+    let imageView: UIImageView = {
+
         let imageView = UIImageView()
         imageView.image = UIImage(named: "bag.circle.fill")
         imageView.layer.cornerRadius = 50
@@ -31,7 +30,8 @@ final class ActivityDetailsView: UIView {
         return imageView
     }()
 
-    private lazy var activityNameLabel: UILabel = {
+    let activityNameLabel: UILabel = {
+
         let label = UILabel()
         label.text = "Mall"
         label.textAlignment = .center
@@ -39,19 +39,22 @@ final class ActivityDetailsView: UIView {
         return label
     }()
 
-    private lazy var categoryLabel: UILabel = {
+    let categoryLabel: UILabel = {
+
         let label = UILabel()
         label.text = "Shopping"
         label.textAlignment = .center
         return label
     }()
 
-    private lazy var priceContainerView: UIView = {
+    let priceContainerView: UIView = {
+
         let view = UIView()
         return view
     }()
 
-    private lazy var priceLabel: UILabel = {
+    let priceLabel: UILabel = {
+
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "$100"
@@ -59,14 +62,16 @@ final class ActivityDetailsView: UIView {
         return label
     }()
 
-    private lazy var timeLabel: UILabel = {
+    let timeLabel: UILabel = {
+
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "8:57 AM"
         return label
     }()
 
-    private lazy var reportIssueButton: UIButton = {
+    let reportIssueButton: UIButton = {
+
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Report a issue", for: .normal)
@@ -76,23 +81,12 @@ final class ActivityDetailsView: UIView {
         return button
     }()
 
-    // MARK: UIView LifeCycle
 
     init() {
         super.init(frame: .zero)
 
-        buildHierarchy()
-        configureConstraints()
-        configureViews()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: Private Methods
+        backgroundColor = .white
 
-    private func buildHierarchy() {
         priceContainerView.addSubview(priceLabel)
         priceContainerView.addSubview(timeLabel)
 
@@ -103,9 +97,7 @@ final class ActivityDetailsView: UIView {
 
         addSubview(stackView)
         addSubview(reportIssueButton)
-    }
 
-    private func configureConstraints() {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
@@ -125,15 +117,9 @@ final class ActivityDetailsView: UIView {
             reportIssueButton.heightAnchor.constraint(equalToConstant: 56)
         ])
     }
-    
-    private func configureViews() {
-        backgroundColor = .white
-    }
-    
-    func setupWithActivity(_ activity: Activity) {
-        activityNameLabel.text = activity.name
-        priceLabel.text = activity.price.toBRLCurrency()
-        timeLabel.text = activity.time
-        categoryLabel.text = activity.category?.rawValue ?? ""
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

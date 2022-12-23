@@ -7,41 +7,43 @@
 
 import Foundation
 
-// MARK: - HomePresenterDelegate
-
 protocol HomePresenterDelegate: AnyObject {
-    func showError(message: String)
-    func showData(homeData: HomeData)
+    func showData()
 }
-
-// MARK: - HomePresenter
 
 final class HomePresenter: HomePresenterProtocol {
     
-    // MARK: Public Properties
-
+    // MARK: Properties
     weak var view: HomePresenterDelegate?
-    var interactor: HomeIteractorProtocol?
-    var router: HomeRouterProtocol?
+    var interactor: HomeInteractorProtocol
+    var router: HomeRouterProtocol
     
-    // MARK: Private Properties
-
-    func viewDidLoad() {
-        interactor?.fetchData()
+    // MARK: Init
+    init(
+        interactor: HomeInteractorProtocol,
+        router: HomeRouterProtocol
+    ) {
+        self.interactor = interactor
+        self.router = router
     }
+    
+    func viewDidLoad() {
+        interactor.didFetchData()
+    }
+    
+    func navigateToActivity() {
+        router.navigateToActivity()
+    }
+    
+    func navigateToUserProfile() {
+        router.navigateToUserProfile()
+    }
+
 }
 
-// MARK: - HomeInteractorDelegate
-
+// MARK: Extensions
 extension HomePresenter: HomeInteractorDelegate {
-    func didFailFetchHomeData(error: HomeError) {
-        switch error {
-        case .unknown:
-            view?.showError(message: "We can't fetch the data. Try again later.")
-        }
-    }
-    
-    func didFetchHomeData(_ homeData: HomeData) {
-        view?.showData(homeData: homeData)
+    func didFetchData() {
+        view?.showData()
     }
 }

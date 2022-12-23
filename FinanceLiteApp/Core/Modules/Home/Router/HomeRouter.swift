@@ -7,23 +7,37 @@
 
 import UIKit
 
-// MARK: - HomeRouter
+typealias HomeInterable = HomePresenterProtocol & HomeInteractorDelegate
 
 final class HomeRouter: HomeRouterProtocol {
     
-    // MARK: Public Methods
+    weak var viewController: UIViewController?
     
     static func createModule() -> UIViewController {
-        let viewController = HomeViewController()
+        let interactor = HomeInteractor()
+        let router = HomeRouter()
+        var presenter: HomeInterable = HomePresenter(
+            interactor: interactor,
+            router: router
+        )
+         
+        let viewController: HomeViewController = HomeViewController(presenter: presenter)
+        router.viewController = viewController
         
-        let presenter: HomePresenterProtocol & HomeInteractorDelegate = HomePresenter()
-        
-        viewController.presenter = presenter
-        viewController.presenter?.router = HomeRouter()
-        viewController.presenter?.view = viewController
-        viewController.presenter?.interactor = HomeInteractor()
-        viewController.presenter?.interactor?.presenter = presenter
+        presenter.view = viewController
+        interactor.presenter = presenter
         
         return viewController
     }
+    
+    func navigateToActivity() {
+        let viewController = ActivityDetailsRouter.createModule()
+        self.viewController?.show(viewController, sender: self)
+    }
+    
+    func navigateToUserProfile() {
+        let viewController = UserProfileRouter.createModule()
+        self.viewController?.showDetailViewController(viewController, sender: self)
+    }
+
 }

@@ -9,35 +9,33 @@ import UIKit
 
 final class ActivityDetailsViewController: UIViewController {
 
-    // MARK: Public Properties
-
-    var presenter: ActivityDetailsPresenterProtocol?
+    var presenter: ActivityDetailsPresenterProtocol
     
-    // MARK: - Private Properties
-
-    private lazy var contentView = ActivityDetailsView()
+    init(presenter: ActivityDetailsPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
     
-    // MARK: UIViewController LifeCycle
-
-    override func loadView() {
-        self.view = contentView
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter?.viewDidLoad()
+        presenter.viewDidLoad()
+    }
+    
+    override func loadView() {
+        self.view = ActivityDetailsView()
     }
 }
 
-// MARK: - ActivityDetailsPresenterDelegate
-
 extension ActivityDetailsViewController: ActivityDetailsPresenterDelegate {
-    func showData(_ activity: Activity) {
-        contentView.setupWithActivity(activity)
-    }
     
-    func showError(message: String) {
-        showAlertError(message: message)
+    func showData() {
+        
+        print("Here is your data, View!")
     }
 }

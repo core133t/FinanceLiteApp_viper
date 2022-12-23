@@ -65,11 +65,6 @@ class ActivityCellView: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func setupWithActivity(_ activity: Activity) {
-        activityNameLabel.text = activity.name
-        activityInfoLabel.text = "\(activity.price.toBRLCurrency() ?? "") • \(activity.time)"
-    }
 }
 
 extension ActivityCellView {
@@ -98,4 +93,3 @@ extension ActivityCellView {
         ])
     }
 }
-

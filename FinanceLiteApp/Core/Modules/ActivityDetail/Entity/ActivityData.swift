@@ -7,14 +7,8 @@
 
 import Foundation
 
-struct Activity: Codable {
-    
-    enum CategoryType: String, Codable {
-        case shopping = "Shopping"
-    }
-    
+struct ActivityEntity: Decodable {
     let name: String
-    let category: CategoryType?
     let price: Double
     let time: String
 }

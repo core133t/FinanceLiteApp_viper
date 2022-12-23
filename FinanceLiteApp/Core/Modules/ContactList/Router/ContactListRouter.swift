@@ -7,24 +7,24 @@
 
 import UIKit
 
-// MARK: ContactListRouter
+typealias ContactListInterable = ContactListPresenterProtocol & ContactListInteractorDelegate
 
 final class ContactListRouter: ContactListRouterProtocol {
     
-    // MARK: Public Methods
-
     static func createModule() -> UIViewController {
-        let viewController = ContactListViewController()
+        let service = FinanceService()
+        let interactor = ContactListInteractor(service: service)
+        let router = ContactListRouter()
+        let presenter: ContactListInterable = ContactListPresenter(
+            interactor: interactor,
+            router: router
+        )
         
-        let presenter: ContactListPresenterProtocol & ContactListInteractorDelegate = ContactListPresenter()
-        
-        viewController.presenter = presenter
-        viewController.presenter?.router = ContactListRouter()
-        viewController.presenter?.view = ContactListViewController()
-        viewController.presenter?.interactor = ContactListInteractor()
-        viewController.presenter?.interactor?.presenter = presenter
+        let viewController = ContactListViewController(presenter: presenter)
+        viewController.presenter.view = viewController
+        viewController.presenter.interactor.presenter = presenter
         
         return viewController
     }
+    
 }
-
