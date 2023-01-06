@@ -25,7 +25,7 @@ final class SplashRouter {
         let router = SplashRouter()
         let presenter = SplashPresenter(view: view, router: router, interactor: interactor)
         view.presenter = presenter
-        interactor.output = presenter
+        interactor.presenter = presenter
         router.viewController = view
         return view
     }
@@ -40,11 +40,6 @@ extension SplashRouter: SplashRouterProtocol {
             let listVC = TabBarController()
             let navigationController = UINavigationController(rootViewController: listVC)
             window.rootViewController = navigationController
-            /*
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = UINavigationController(rootViewController: TabBarController())
-            self.window?.windowScene = windowScene
-            */
         }
     }
 }

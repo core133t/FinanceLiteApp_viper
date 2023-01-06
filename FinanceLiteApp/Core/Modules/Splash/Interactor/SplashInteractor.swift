@@ -8,22 +8,19 @@
 import Foundation
 
 protocol SplashInteractorProtocol: AnyObject {
-    func checkInternetConnection()
+    var presenter: SplashInteractorDelegate? { get set }
+    func didFetchData()
 }
 
-protocol SplashInteractorOutputProtocol: AnyObject {
+protocol SplashInteractorDelegate: AnyObject {
+    func fetchData()
+}
+
+final class SplashInteractor:SplashInteractorProtocol {
+    var presenter: SplashInteractorDelegate?
     
-}
-
-final class SplashInteractor {
-    var output: SplashInteractorOutputProtocol?
-}
-
-extension SplashInteractor: SplashInteractorProtocol {
-    func checkInternetConnection() {
+    func didFetchData() {
+        self.presenter?.fetchData()
     }
-    
-    
-
 }
 

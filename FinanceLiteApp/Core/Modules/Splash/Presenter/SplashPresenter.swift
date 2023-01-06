@@ -25,7 +25,7 @@ final class SplashPresenter: SplashPresenterProtocol {
     }
     
     func viewDidAppear() {
-        interactor.checkInternetConnection()
+        interactor.didFetchData()
     }
     
     func routeToList() {
@@ -34,16 +34,12 @@ final class SplashPresenter: SplashPresenterProtocol {
     
 }
 
-
-extension SplashPresenter: SplashInteractorOutputProtocol {
+extension SplashPresenter: SplashInteractorDelegate {
     
-    func internetConnection(status: Bool) {
-        if status {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.routeToList()
-            }
-        } else {
-            view.noInternetConnection()
+    func fetchData() {
+        let delay: TimeInterval = 3
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            self.routeToList()
         }
     }
 }

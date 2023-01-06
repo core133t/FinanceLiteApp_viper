@@ -8,30 +8,40 @@
 import UIKit
 
 protocol SplashViewControllerProtocol: AnyObject {
-    func noInternetConnection()
+   
 }
 
 class SplashViewController: UIViewController {
     
-    private var image = UIImage(named: "finance_logo")
-    //private weak var v:UIImageView!
-    //private var splashImage:UIImageView!
-    private var splashImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 150))
-    //private var image = UIImage(named: "finance_logo")
-    
+    private var image = UIImage(named: "FinanceLite_logo")
+    private var splashImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    private var logoLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 220, height: 100))
     
     var presenter: SplashPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //splashImage.frame = self.view.bounds
-        //splashImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 150))
-        //splashImage.frame = CGRect(x: 0, y: 0, width: 200, height: 150)
         self.view.backgroundColor = .white
-        splashImage.center = view.center
+        splashImage.translatesAutoresizingMaskIntoConstraints = false
         splashImage.backgroundColor = .white
         splashImage.image = image
+        splashImage.center = CGPoint(x: view.center.x, y: view.center.y - 50)
+        
+        logoLabel.font = .systemFont(ofSize: 38, weight: .bold)
+        logoLabel.translatesAutoresizingMaskIntoConstraints = false
+        logoLabel.center = CGPoint(x: view.center.x+10, y: splashImage.center.y + 100)
+        logoLabel.text = "FinanceLite"
+        logoLabel.textColor = .black
+        logoLabel.transform = CGAffineTransform(translationX: 0, y: 100)
+        
+        view.addSubview(logoLabel)
         view.addSubview(splashImage)
+    
+        UIView.animate(withDuration: 1){
+            self.logoLabel.transform = .identity
+            self.splashImage.transform = CGAffineTransform(scaleX: 1.6, y: 1.6)
+        }
+        
         presenter.viewDidAppear()
         setAccessibilityIdentifiers()
     }
@@ -45,9 +55,7 @@ extension SplashViewController {
 }
 
 extension SplashViewController: SplashViewControllerProtocol {
-    
-    func noInternetConnection() {
-        
-    }
+   
 }
+ 
 

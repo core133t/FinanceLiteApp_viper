@@ -12,7 +12,7 @@ protocol FinanceServiceProtocol {
     func cancel()
 }
 
-final class FinanceService: FinanceServiceProtocol {
+class FinanceService: FinanceServiceProtocol {
     private var session: URLSession
     private var dataTask: URLSessionDataTask?
 
@@ -53,5 +53,5 @@ final class FinanceService: FinanceServiceProtocol {
     func cancel() {
         self.dataTask?.cancel()
     }
-    
+
 }
