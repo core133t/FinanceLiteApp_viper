@@ -59,7 +59,8 @@ final class ConfirmationView: UIView {
     }()
 
     let loadingIndicator: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView(style: .medium)
+        //style: .medium in ios13
+        let activityIndicator = UIActivityIndicatorView(style: .gray)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         return activityIndicator
     }()

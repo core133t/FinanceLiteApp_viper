@@ -10,8 +10,8 @@ import UIKit
 class UserProfileView: UIView {
 
     private lazy var tableView: UITableView = {
-
-        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        //style: .InsertGroup in ios13
+        let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.dataSource = self

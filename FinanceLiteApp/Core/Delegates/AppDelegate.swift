@@ -10,15 +10,18 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        
+        //guard let scene = (scene as? UIWindowScene) else { return }
+        //let window = UIWindow(windowScene: scene)
+        let splash = SplashRouter.createModule()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = splash
+        window?.makeKeyAndVisible()
+        //self.window = window
+        
         return true
-    }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 }
