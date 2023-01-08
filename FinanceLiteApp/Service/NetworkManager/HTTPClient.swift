@@ -21,7 +21,7 @@ class FinanceService: FinanceServiceProtocol {
     }
 
     func load<T: Decodable>(endpoint: FinanceEndpoint, completion: @escaping (Result<T, Error>) -> Void) {
-        guard let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-viper-finance/main/api/\(endpoint.rawValue).json") else {
+        guard let url = URL(string: "https://raw.githubusercontent.com/core133t/FinanceLite-API/main/api/\(endpoint.rawValue).json") else {
             DispatchQueue.main.async {
                 completion(.failure(FinanceServiceError.invalidURL))
             }

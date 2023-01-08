@@ -35,6 +35,8 @@
 		D1A1630C29555B72000EFE77 /* TransferPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1630B29555B72000EFE77 /* TransferPresenterTest.swift */; };
 		D1A1630E29555B9B000EFE77 /* TransferInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1630D29555B9B000EFE77 /* TransferInteractorTest.swift */; };
 		D1A1631029555C4B000EFE77 /* TransferViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1630F29555C4B000EFE77 /* TransferViewControllerTest.swift */; };
+		D1A1650A296B3C14000EFE77 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A16509296B3C14000EFE77 /* CoreDataManager.swift */; };
+		D1A1650D296B4A37000EFE77 /* FinanceLiteAppCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1A1650B296B4A37000EFE77 /* FinanceLiteAppCoreData.xcdatamodeld */; };
 		D1A7D34B2953EE5F00563FC4 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34A2953EE5F00563FC4 /* ContactListView.swift */; };
 		D1A7D34D2953EE9E00563FC4 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34C2953EE9E00563FC4 /* ContactListViewController.swift */; };
 		D1A7D34F2953EED100563FC4 /* ContactListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34E2953EED100563FC4 /* ContactListInteractor.swift */; };
@@ -128,6 +130,8 @@
 		D1A1630B29555B72000EFE77 /* TransferPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferPresenterTest.swift; sourceTree = "<group>"; };
 		D1A1630D29555B9B000EFE77 /* TransferInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferInteractorTest.swift; sourceTree = "<group>"; };
 		D1A1630F29555C4B000EFE77 /* TransferViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewControllerTest.swift; sourceTree = "<group>"; };
+		D1A16509296B3C14000EFE77 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D1A1650C296B4A37000EFE77 /* FinanceLiteAppCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinanceLiteAppCoreData.xcdatamodel; sourceTree = "<group>"; };
 		D1A7D34A2953EE5F00563FC4 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		D1A7D34C2953EE9E00563FC4 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		D1A7D34E2953EED100563FC4 /* ContactListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListInteractor.swift; sourceTree = "<group>"; };
@@ -219,13 +223,11 @@
 		D1069E502952823B005D03A4 /* FinanceLiteApp */ = {
 			isa = PBXGroup;
 			children = (
+				D1069E5F2952823C005D03A4 /* Info.plist */,
 				D1069E812953A7FA005D03A4 /* Core */,
 				D1A7D39F2953FB7C00563FC4 /* Service */,
 				D1A7D39E2953FB5800563FC4 /* Resources */,
-				D1069E572952823B005D03A4 /* Main.storyboard */,
-				D1069E5A2952823C005D03A4 /* Assets.xcassets */,
-				D1069E5C2952823C005D03A4 /* LaunchScreen.storyboard */,
-				D1069E5F2952823C005D03A4 /* Info.plist */,
+				D1A1650B296B4A37000EFE77 /* FinanceLiteAppCoreData.xcdatamodeld */,
 			);
 			path = FinanceLiteApp;
 			sourceTree = "<group>";
@@ -281,8 +283,8 @@
 		D1069E852953AC6E005D03A4 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				D1A162E02955517B000EFE77 /* Entity */,
 				D1069E952953AE99005D03A4 /* ContactListProtocols.swift */,
+				D1A162E02955517B000EFE77 /* Entity */,
 				D1A7D3492953EE3F00563FC4 /* View */,
 				D1A7D3482953EE1D00563FC4 /* Interactor */,
 				D1A7D3472953EDC500563FC4 /* Presenter */,
@@ -640,6 +642,9 @@
 		D1A7D39E2953FB5800563FC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D1069E5C2952823C005D03A4 /* LaunchScreen.storyboard */,
+				D1069E5A2952823C005D03A4 /* Assets.xcassets */,
+				D1069E572952823B005D03A4 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -666,6 +671,7 @@
 		D1A7D3A12953FBDB00563FC4 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				D1A16509296B3C14000EFE77 /* CoreDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -905,6 +911,7 @@
 				D1A7D3782953F49500563FC4 /* HomePresenter.swift in Sources */,
 				D1069E962953AE99005D03A4 /* ContactListProtocols.swift in Sources */,
 				D1A7D3A52953FC1F00563FC4 /* RequestError.swift in Sources */,
+				D1A1650D296B4A37000EFE77 /* FinanceLiteAppCoreData.xcdatamodeld in Sources */,
 				D1A7D3532953EF4B00563FC4 /* ContactListRouter.swift in Sources */,
 				D1A7D3642953F14C00563FC4 /* TransferInteractor.swift in Sources */,
 				D1A7D3CA2954006500563FC4 /* ContactListCellView.swift in Sources */,
@@ -912,6 +919,7 @@
 				D1A162FF29555449000EFE77 /* UserProfilePresenter.swift in Sources */,
 				D1A7D3C12953FF6100563FC4 /* HomeTabBarController.swift in Sources */,
 				D1A7D3A92953FC6D00563FC4 /* Endpoint.swift in Sources */,
+				D1A1650A296B3C14000EFE77 /* CoreDataManager.swift in Sources */,
 				D1A7D3742953F3BD00563FC4 /* HomeViewController.swift in Sources */,
 				D1A7D3722953F3A000563FC4 /* HomeView.swift in Sources */,
 				D1A7D3902953F84400563FC4 /* ActivityDetailInteractor.swift in Sources */,
@@ -1286,6 +1294,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D1A1650B296B4A37000EFE77 /* FinanceLiteAppCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D1A1650C296B4A37000EFE77 /* FinanceLiteAppCoreData.xcdatamodel */,
+			);
+			currentVersion = D1A1650C296B4A37000EFE77 /* FinanceLiteAppCoreData.xcdatamodel */;
+			path = FinanceLiteAppCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D1069E462952823B005D03A4 /* Project object */;
 }
