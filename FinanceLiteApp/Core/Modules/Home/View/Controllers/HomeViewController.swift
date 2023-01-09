@@ -57,7 +57,7 @@ extension HomeViewController: HomeViewDelegate {
 }
 
 extension HomeViewController: HomePresenterDelegate {
-    func showData() {
-        print("HomeViewController - HomePresenterDelegate - showData()")
+    func showData(_ activityList: HomeEntity) {
+        homeView.setupWithHomeData(activityList)
     }
 }

@@ -14,8 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //guard let scene = (scene as? UIWindowScene) else { return }
-        //let window = UIWindow(windowScene: scene)
         let splash = SplashRouter.createModule()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = splash

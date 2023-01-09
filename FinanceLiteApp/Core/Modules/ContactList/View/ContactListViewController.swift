@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 final class ContactListViewController: UIViewController {
 
     private lazy var contentView: ContactListView = {

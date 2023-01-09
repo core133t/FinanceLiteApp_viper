@@ -24,7 +24,7 @@ final class ActivityDetailsView: UIView {
     let imageView: UIImageView = {
 
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "bag.circle.fill")
+        imageView.image = UIImage(named: "bag")
         imageView.layer.cornerRadius = 50
         imageView.clipsToBounds = true
         return imageView

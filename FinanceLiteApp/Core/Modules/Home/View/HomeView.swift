@@ -49,7 +49,7 @@ final class HomeView: UIView {
         stackView.setCustomSpacing(32, after: homeHeaderView)
         addSubview(stackView)
 
-        let estimatedHeight = CGFloat(activityListView.tableView.numberOfRows(inSection: 0))*ActivityListView.cellSize
+        let estimatedHeight = CGFloat(6)*ActivityListView.cellSize
 
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
@@ -62,6 +62,16 @@ final class HomeView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    func setupWithHomeData(_ homeEntity: HomeEntity) {
+        // Header
+        /*
+        homeHeaderView.label.text = homeData.balance
+        homeHeaderView.savingsValueLabel.text = homeData.savings
+        homeHeaderView.spendingValueLabel.text = homeData.spending
+        */
+        // List
+        activityListView.items = homeEntity.listActivity
     }
 }
 

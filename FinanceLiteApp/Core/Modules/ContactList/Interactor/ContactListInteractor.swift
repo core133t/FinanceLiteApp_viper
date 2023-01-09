@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 protocol ContactListInteractorDelegate: AnyObject {
     func didFetchData(contactList: [ContactEntity])
 }

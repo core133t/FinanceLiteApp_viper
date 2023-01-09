@@ -1,5 +1,5 @@
 //
-//  ActivityData.swift
+//  ActivityEntity.swift
 //  FinanceLiteApp
 //
 //  Created by Dmitry Loginov on 19.12.2022.
@@ -11,5 +11,6 @@ struct ActivityEntity: Decodable {
     let name: String
     let price: Double
     let time: String
+    let imageTag: String
 }
 

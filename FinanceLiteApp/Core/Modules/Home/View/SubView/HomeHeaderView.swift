@@ -23,7 +23,7 @@ class HomeHeaderView: UIView {
     let label: UILabel = {
 
         let label = UILabel()
-        label.text = "$15,459.27"
+        label.text = "$13,377.27"
         label.font = UIFont.boldSystemFont(ofSize: 34)
         return label
     }()

@@ -1,10 +1,8 @@
-//
 //  ActivityListView.swift
 //  FinanceLiteApp
 //
 //  Created by Dmitry Loginov on 22.12.2022.
 //
-
 import UIKit
 
 protocol ActivityListViewDelegate: AnyObject {
@@ -13,6 +11,12 @@ protocol ActivityListViewDelegate: AnyObject {
 }
 
 class ActivityListView: UIView {
+    
+    var items: [ActivityEntity] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     weak var delegate: ActivityListViewDelegate?
 
@@ -68,12 +72,16 @@ extension ActivityListView: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 5
+        return items.count
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ActivityCellView
+        
+        let activity = items[indexPath.row]
+        
+        cell.setupWithActivity(activity)
 
         return cell
     }
@@ -91,4 +99,3 @@ extension ActivityListView: UITableViewDelegate {
         delegate?.didSelectedActivity()
     }
 }
-

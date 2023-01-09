@@ -62,7 +62,7 @@
 		D1A7D38E2953F7FF00563FC4 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D38D2953F7FF00563FC4 /* ActivityDetailViewController.swift */; };
 		D1A7D3902953F84400563FC4 /* ActivityDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D38F2953F84400563FC4 /* ActivityDetailInteractor.swift */; };
 		D1A7D3922953F86400563FC4 /* ActivityDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3912953F86400563FC4 /* ActivityDetailPresenter.swift */; };
-		D1A7D3942953F89200563FC4 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3932953F89200563FC4 /* ActivityData.swift */; };
+		D1A7D3942953F89200563FC4 /* ActivityEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3932953F89200563FC4 /* ActivityEntity.swift */; };
 		D1A7D3962953F8B900563FC4 /* ActivityDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3952953F8B900563FC4 /* ActivityDetailRouter.swift */; };
 		D1A7D3982953F8E400563FC4 /* ActivityDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3972953F8E400563FC4 /* ActivityDetailProtocols.swift */; };
 		D1A7D3A32953FBF800563FC4 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D3A22953FBF800563FC4 /* HTTPClient.swift */; };
@@ -157,7 +157,7 @@
 		D1A7D38D2953F7FF00563FC4 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		D1A7D38F2953F84400563FC4 /* ActivityDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailInteractor.swift; sourceTree = "<group>"; };
 		D1A7D3912953F86400563FC4 /* ActivityDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailPresenter.swift; sourceTree = "<group>"; };
-		D1A7D3932953F89200563FC4 /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
+		D1A7D3932953F89200563FC4 /* ActivityEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEntity.swift; sourceTree = "<group>"; };
 		D1A7D3952953F8B900563FC4 /* ActivityDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailRouter.swift; sourceTree = "<group>"; };
 		D1A7D3972953F8E400563FC4 /* ActivityDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailProtocols.swift; sourceTree = "<group>"; };
 		D1A7D3A22953FBF800563FC4 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -608,7 +608,7 @@
 		D1A7D3872953F6EF00563FC4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				D1A7D3932953F89200563FC4 /* ActivityData.swift */,
+				D1A7D3932953F89200563FC4 /* ActivityEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -632,7 +632,6 @@
 		D1A7D38A2953F71F00563FC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D1A7D3C32953FFC200563FC4 /* SubView */,
 				D1A7D38B2953F76800563FC4 /* ActivityDetailView.swift */,
 				D1A7D38D2953F7FF00563FC4 /* ActivityDetailViewController.swift */,
 			);
@@ -679,6 +678,8 @@
 		D1A7D3BD2953FED000563FC4 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				D1A7D3C42953FFD900563FC4 /* ActivityCellView.swift */,
+				D1A7D3C62953FFF900563FC4 /* ActivityListView.swift */,
 				D1A7D3BE2953FF0300563FC4 /* HomeHeaderView.swift */,
 			);
 			path = SubView;
@@ -691,15 +692,6 @@
 				D1A7D3C02953FF6100563FC4 /* HomeTabBarController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		D1A7D3C32953FFC200563FC4 /* SubView */ = {
-			isa = PBXGroup;
-			children = (
-				D1A7D3C42953FFD900563FC4 /* ActivityCellView.swift */,
-				D1A7D3C62953FFF900563FC4 /* ActivityListView.swift */,
-			);
-			path = SubView;
 			sourceTree = "<group>";
 		};
 		D1A7D3C82954003400563FC4 /* SubView */ = {
@@ -939,7 +931,7 @@
 				D1A7D37A2953F4B900563FC4 /* HomeRouter.swift in Sources */,
 				D1A7D3D4295411C900563FC4 /* SplashViewController.swift in Sources */,
 				D1A7D3822953F5BF00563FC4 /* UserProfileView.swift in Sources */,
-				D1A7D3942953F89200563FC4 /* ActivityData.swift in Sources */,
+				D1A7D3942953F89200563FC4 /* ActivityEntity.swift in Sources */,
 				D1A162EC29555283000EFE77 /* ConfirmationRouter.swift in Sources */,
 				D1A162E829555247000EFE77 /* ConfirmationPresenter.swift in Sources */,
 				D1A7D36A2953F1DB00563FC4 /* TransferProtocols.swift in Sources */,

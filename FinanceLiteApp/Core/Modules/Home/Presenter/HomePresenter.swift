@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomePresenterDelegate: AnyObject {
-    func showData()
+    func showData(_ activityList: HomeEntity)
 }
 
 final class HomePresenter: HomePresenterProtocol {
@@ -43,7 +43,7 @@ final class HomePresenter: HomePresenterProtocol {
 
 // MARK: Extensions
 extension HomePresenter: HomeInteractorDelegate {
-    func didFetchData() {
-        view?.showData()
+    func didFetchData(activityList: HomeEntity) {
+        view?.showData(activityList)
     }
 }

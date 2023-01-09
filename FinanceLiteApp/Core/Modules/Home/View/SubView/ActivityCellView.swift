@@ -32,7 +32,7 @@ class ActivityCellView: UITableViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 25
         imageView.layer.masksToBounds = true
-        imageView.image = UIImage(named: "bag.circle.fill")
+        imageView.image = UIImage(named: "bag")
         imageView.tintColor = .systemPurple
         return imageView
     }()
@@ -64,6 +64,12 @@ class ActivityCellView: UITableViewCell {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupWithActivity(_ activity: ActivityEntity) {
+        activityNameLabel.text = activity.name
+        activityInfoLabel.text = "$\(activity.price) • \(activity.time)"
+        categoryImageView.image = UIImage(named: "\(activity.imageTag)")
     }
 }
 
