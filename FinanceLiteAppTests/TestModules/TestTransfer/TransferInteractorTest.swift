@@ -43,14 +43,6 @@ final class TransfersInteractorDelegateSpy: TransfersInteractorDelegate {
 
 }
 
-final class ContactListInteractorDelegateSpy: ContactListInteractorDelegate {
-
-    private(set) var didFetchDataCalled = false
-    func didFetchData(contactList: [ContactEntity]) {
-        didFetchDataCalled = true
-    }
-
-}
 
 final class FinanceServiceProtocolSpy: FinanceServiceProtocol {
 

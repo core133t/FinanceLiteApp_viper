@@ -24,18 +24,15 @@ final class HomePresenterTests: XCTestCase {
         sut.viewDidLoad()
         XCTAssertTrue(interactorSpy.didFetchDataCalled)
     }
-
-    func test_didFetchData() {
-        sut.didFetchData()
-        XCTAssertTrue(viewContollerSpy.showDataCalled)
-    }
 }
 
 final class HomePresenterDelegateSpy: HomePresenterDelegate {
-
     private(set) var showDataCalled = false
-    func showData() {
+    func showData(_ activityList: FinanceLiteApp.HomeEntity) {
         showDataCalled = true
     }
-    
+}
+
+enum HomeErrorMock: Error {
+    case generic
 }

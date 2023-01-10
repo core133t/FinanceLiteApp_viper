@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = splash
         window?.makeKeyAndVisible()
-        //self.window = window
         
         return true
     }
