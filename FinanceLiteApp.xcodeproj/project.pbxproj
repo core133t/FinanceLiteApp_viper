@@ -45,6 +45,11 @@
 		D1A16521296EDDD5000EFE77 /* ConfirmationPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A16520296EDDD5000EFE77 /* ConfirmationPresenterTest.swift */; };
 		D1A16523296EDE53000EFE77 /* ConfirmationViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A16522296EDE53000EFE77 /* ConfirmationViewControllerTest.swift */; };
 		D1A16525296EDF78000EFE77 /* HomeViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A16524296EDF78000EFE77 /* HomeViewTest.swift */; };
+		D1A16528296F2612000EFE77 /* UserProfileViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A16527296F2612000EFE77 /* UserProfileViewControllerTest.swift */; };
+		D1A1652A296F2650000EFE77 /* UserProfileInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A16529296F2650000EFE77 /* UserProfileInteractorTest.swift */; };
+		D1A1652C296F2684000EFE77 /* UserProfilePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1652B296F2684000EFE77 /* UserProfilePresenterTest.swift */; };
+		D1A1652E296F26B1000EFE77 /* UserProfileRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1652D296F26B1000EFE77 /* UserProfileRouterTest.swift */; };
+		D1A16531296F2B57000EFE77 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A16530296F2B57000EFE77 /* AlertView.swift */; };
 		D1A7D34B2953EE5F00563FC4 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34A2953EE5F00563FC4 /* ContactListView.swift */; };
 		D1A7D34D2953EE9E00563FC4 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34C2953EE9E00563FC4 /* ContactListViewController.swift */; };
 		D1A7D34F2953EED100563FC4 /* ContactListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34E2953EED100563FC4 /* ContactListInteractor.swift */; };
@@ -148,6 +153,11 @@
 		D1A16520296EDDD5000EFE77 /* ConfirmationPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPresenterTest.swift; sourceTree = "<group>"; };
 		D1A16522296EDE53000EFE77 /* ConfirmationViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewControllerTest.swift; sourceTree = "<group>"; };
 		D1A16524296EDF78000EFE77 /* HomeViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTest.swift; sourceTree = "<group>"; };
+		D1A16527296F2612000EFE77 /* UserProfileViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewControllerTest.swift; sourceTree = "<group>"; };
+		D1A16529296F2650000EFE77 /* UserProfileInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInteractorTest.swift; sourceTree = "<group>"; };
+		D1A1652B296F2684000EFE77 /* UserProfilePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePresenterTest.swift; sourceTree = "<group>"; };
+		D1A1652D296F26B1000EFE77 /* UserProfileRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileRouterTest.swift; sourceTree = "<group>"; };
+		D1A16530296F2B57000EFE77 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		D1A7D34A2953EE5F00563FC4 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		D1A7D34C2953EE9E00563FC4 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		D1A7D34E2953EED100563FC4 /* ContactListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListInteractor.swift; sourceTree = "<group>"; };
@@ -242,6 +252,7 @@
 				D1069E5F2952823C005D03A4 /* Info.plist */,
 				D1069E812953A7FA005D03A4 /* Core */,
 				D1A7D39F2953FB7C00563FC4 /* Service */,
+				D1A1652F296F2B3C000EFE77 /* Components */,
 				D1A7D39E2953FB5800563FC4 /* Resources */,
 				D1A1650B296B4A37000EFE77 /* FinanceLiteAppCoreData.xcdatamodeld */,
 			);
@@ -312,6 +323,7 @@
 		D1A162D429553315000EFE77 /* TestModules */ = {
 			isa = PBXGroup;
 			children = (
+				D1A16526296F25E9000EFE77 /* TestUserProfile */,
 				D1A1651D296ED9CC000EFE77 /* TestConfirmation */,
 				D1A16514296DC59E000EFE77 /* TestContactList */,
 				D1A1630A29555B42000EFE77 /* TestTransfer */,
@@ -442,6 +454,25 @@
 				D1A16522296EDE53000EFE77 /* ConfirmationViewControllerTest.swift */,
 			);
 			path = TestConfirmation;
+			sourceTree = "<group>";
+		};
+		D1A16526296F25E9000EFE77 /* TestUserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				D1A16527296F2612000EFE77 /* UserProfileViewControllerTest.swift */,
+				D1A16529296F2650000EFE77 /* UserProfileInteractorTest.swift */,
+				D1A1652B296F2684000EFE77 /* UserProfilePresenterTest.swift */,
+				D1A1652D296F26B1000EFE77 /* UserProfileRouterTest.swift */,
+			);
+			path = TestUserProfile;
+			sourceTree = "<group>";
+		};
+		D1A1652F296F2B3C000EFE77 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D1A16530296F2B57000EFE77 /* AlertView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		D1A7D3462953EDAE00563FC4 /* Router */ = {
@@ -929,6 +960,7 @@
 				D1A7D3C52953FFD900563FC4 /* ActivityCellView.swift in Sources */,
 				D1069E522952823B005D03A4 /* AppDelegate.swift in Sources */,
 				D1A7D3842953F60200563FC4 /* UserProfileViewController.swift in Sources */,
+				D1A16531296F2B57000EFE77 /* AlertView.swift in Sources */,
 				D1A162FD29555429000EFE77 /* UserProfileRouter.swift in Sources */,
 				D1A162EA29555266000EFE77 /* ConfirmationInteractor.swift in Sources */,
 				D1A162FB29555407000EFE77 /* UserEntity.swift in Sources */,
@@ -992,9 +1024,13 @@
 			files = (
 				D1A162DF2955398E000EFE77 /* HomeRouterTests.swift in Sources */,
 				D1A1651F296EDD65000EFE77 /* ConfirmationRouterTest.swift in Sources */,
+				D1A1652E296F26B1000EFE77 /* UserProfileRouterTest.swift in Sources */,
+				D1A1652A296F2650000EFE77 /* UserProfileInteractorTest.swift in Sources */,
 				D1A16513296DBE94000EFE77 /* TransferRouterTest.swift in Sources */,
 				D1A16518296DC5DE000EFE77 /* ContactListInteractorTest.swift in Sources */,
 				D1A16525296EDF78000EFE77 /* HomeViewTest.swift in Sources */,
+				D1A16528296F2612000EFE77 /* UserProfileViewControllerTest.swift in Sources */,
+				D1A1652C296F2684000EFE77 /* UserProfilePresenterTest.swift in Sources */,
 				D1A1651A296DC604000EFE77 /* ContactListRouterTest.swift in Sources */,
 				D1A16521296EDDD5000EFE77 /* ConfirmationPresenterTest.swift in Sources */,
 				D1A1631029555C4B000EFE77 /* TransferViewControllerTest.swift in Sources */,

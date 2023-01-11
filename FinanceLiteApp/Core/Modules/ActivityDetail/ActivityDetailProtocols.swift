@@ -14,6 +14,7 @@ protocol ActivityDetailsPresenterProtocol {
     var router: ActivityDetailsRouterProtocol { get set }
     
     func viewDidLoad()
+    func reportProblem()
 }
 
 protocol ActivityDetailsRouterProtocol {
@@ -26,4 +27,5 @@ protocol ActivityDetailsInteractorProtocol {
     var presenter: ActivityDetailsInteractorDelegate? { get set }
     
     func fetchData()
+    func reportProblem()
 }

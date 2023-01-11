@@ -8,8 +8,8 @@
 import Foundation
 
 protocol ActivityDetailsInteractorDelegate: AnyObject {
-    
     func didFetchData()
+    func didReportProblem()
 }
 
 final class ActivityDetailsInteractor: ActivityDetailsInteractorProtocol {
@@ -18,5 +18,9 @@ final class ActivityDetailsInteractor: ActivityDetailsInteractorProtocol {
     
     func fetchData() {
         presenter?.didFetchData()
+    }
+    
+    func reportProblem() {
+        presenter?.didReportProblem()
     }
 }

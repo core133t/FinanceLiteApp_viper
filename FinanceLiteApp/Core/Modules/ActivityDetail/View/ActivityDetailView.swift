@@ -8,8 +8,14 @@
 
 import UIKit
 
-final class ActivityDetailsView: UIView {
+protocol ActivityDetailsViewDelegate : AnyObject {
+    func reportProblem()
+}
 
+final class ActivityDetailsView: UIView {
+    
+    weak var delegate: ActivityDetailsViewDelegate?
+    
     let stackView: UIStackView = {
 
         let stackView = UIStackView()
@@ -78,6 +84,7 @@ final class ActivityDetailsView: UIView {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 14
+        button.addTarget(self, action: #selector(reportProblem), for: .touchUpInside)
         return button
     }()
 
@@ -121,5 +128,10 @@ final class ActivityDetailsView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc
+    private func reportProblem() {
+        delegate?.reportProblem()
     }
 }

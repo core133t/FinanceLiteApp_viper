@@ -40,7 +40,7 @@ final class TransfersView: UIView {
         return textField
     }()
     
-    private let chooseContactButton: UIButton = {
+    private lazy var chooseContactButton: UIButton = {
         
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -50,7 +50,7 @@ final class TransfersView: UIView {
         return button
     }()
     
-    private let transferButton: UIButton = {
+    private lazy var transferButton: UIButton = {
         
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
