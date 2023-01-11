@@ -32,6 +32,13 @@ final class TransfersViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.first != nil {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches, with: event)
+    }
+    
     override func loadView() {
         self.view = transferView
     }
