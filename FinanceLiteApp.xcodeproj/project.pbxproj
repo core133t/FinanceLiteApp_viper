@@ -50,6 +50,10 @@
 		D1A1652C296F2684000EFE77 /* UserProfilePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1652B296F2684000EFE77 /* UserProfilePresenterTest.swift */; };
 		D1A1652E296F26B1000EFE77 /* UserProfileRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1652D296F26B1000EFE77 /* UserProfileRouterTest.swift */; };
 		D1A16531296F2B57000EFE77 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A16530296F2B57000EFE77 /* AlertView.swift */; };
+		D1A1653B2976FBF5000EFE77 /* Extension CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1653A2976FBF5000EFE77 /* Extension CoreDataManager.swift */; };
+		D1A1653D297700B9000EFE77 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1653C297700B9000EFE77 /* Errors.swift */; };
+		D1A1654029787E1E000EFE77 /* ContactEntityNew+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1653E29787E1E000EFE77 /* ContactEntityNew+CoreDataClass.swift */; };
+		D1A1654129787E1E000EFE77 /* ContactEntityNew+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1653F29787E1E000EFE77 /* ContactEntityNew+CoreDataProperties.swift */; };
 		D1A7D34B2953EE5F00563FC4 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34A2953EE5F00563FC4 /* ContactListView.swift */; };
 		D1A7D34D2953EE9E00563FC4 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34C2953EE9E00563FC4 /* ContactListViewController.swift */; };
 		D1A7D34F2953EED100563FC4 /* ContactListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7D34E2953EED100563FC4 /* ContactListInteractor.swift */; };
@@ -158,6 +162,10 @@
 		D1A1652B296F2684000EFE77 /* UserProfilePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePresenterTest.swift; sourceTree = "<group>"; };
 		D1A1652D296F26B1000EFE77 /* UserProfileRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileRouterTest.swift; sourceTree = "<group>"; };
 		D1A16530296F2B57000EFE77 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		D1A1653A2976FBF5000EFE77 /* Extension CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension CoreDataManager.swift"; sourceTree = "<group>"; };
+		D1A1653C297700B9000EFE77 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		D1A1653E29787E1E000EFE77 /* ContactEntityNew+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactEntityNew+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D1A1653F29787E1E000EFE77 /* ContactEntityNew+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactEntityNew+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D1A7D34A2953EE5F00563FC4 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		D1A7D34C2953EE9E00563FC4 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		D1A7D34E2953EED100563FC4 /* ContactListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListInteractor.swift; sourceTree = "<group>"; };
@@ -346,6 +354,8 @@
 		D1A162E02955517B000EFE77 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D1A1653F29787E1E000EFE77 /* ContactEntityNew+CoreDataProperties.swift */,
+				D1A1653E29787E1E000EFE77 /* ContactEntityNew+CoreDataClass.swift */,
 				D1A162E12955519F000EFE77 /* ContactListEntity.swift */,
 			);
 			path = Entity;
@@ -471,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A16530296F2B57000EFE77 /* AlertView.swift */,
+				D1A1653C297700B9000EFE77 /* Errors.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -742,6 +753,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A16509296B3C14000EFE77 /* CoreDataManager.swift */,
+				D1A1653A2976FBF5000EFE77 /* Extension CoreDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -966,12 +978,14 @@
 				D1A162FB29555407000EFE77 /* UserEntity.swift in Sources */,
 				D1A7D37E2953F50600563FC4 /* HomeProtocols.swift in Sources */,
 				D1A7D38E2953F7FF00563FC4 /* ActivityDetailViewController.swift in Sources */,
+				D1A1653B2976FBF5000EFE77 /* Extension CoreDataManager.swift in Sources */,
 				D1A7D3762953F3EF00563FC4 /* HomeInteractor.swift in Sources */,
 				D1A7D3DA2954131F00563FC4 /* SplashRouter.swift in Sources */,
 				D1A16303295554A3000EFE77 /* UserProfileProtocols.swift in Sources */,
 				D1A7D34D2953EE9E00563FC4 /* ContactListViewController.swift in Sources */,
 				D1A162EE295552A5000EFE77 /* ConfirmationEntity.swift in Sources */,
 				D1A7D3CD295400B100563FC4 /* UserProfileHeaderView.swift in Sources */,
+				D1A1654129787E1E000EFE77 /* ContactEntityNew+CoreDataProperties.swift in Sources */,
 				D1A7D3782953F49500563FC4 /* HomePresenter.swift in Sources */,
 				D1069E962953AE99005D03A4 /* ContactListProtocols.swift in Sources */,
 				D1A7D3A52953FC1F00563FC4 /* RequestError.swift in Sources */,
@@ -989,6 +1003,7 @@
 				D1A7D3902953F84400563FC4 /* ActivityDetailInteractor.swift in Sources */,
 				D1A7D3962953F8B900563FC4 /* ActivityDetailRouter.swift in Sources */,
 				D1A163012955547D000EFE77 /* UserProfileInteractor.swift in Sources */,
+				D1A1653D297700B9000EFE77 /* Errors.swift in Sources */,
 				D1A7D3D8295412E300563FC4 /* SplashPresenter.swift in Sources */,
 				D1A7D3682953F1A700563FC4 /* TransferRouter.swift in Sources */,
 				D1A7D38C2953F76800563FC4 /* ActivityDetailView.swift in Sources */,
@@ -1003,6 +1018,7 @@
 				D1A7D37A2953F4B900563FC4 /* HomeRouter.swift in Sources */,
 				D1A7D3D4295411C900563FC4 /* SplashViewController.swift in Sources */,
 				D1A7D3822953F5BF00563FC4 /* UserProfileView.swift in Sources */,
+				D1A1654029787E1E000EFE77 /* ContactEntityNew+CoreDataClass.swift in Sources */,
 				D1A7D3942953F89200563FC4 /* ActivityEntity.swift in Sources */,
 				D1A162EC29555283000EFE77 /* ConfirmationRouter.swift in Sources */,
 				D1A162E829555247000EFE77 /* ConfirmationPresenter.swift in Sources */,

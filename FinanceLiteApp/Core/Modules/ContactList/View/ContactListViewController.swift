@@ -14,7 +14,7 @@ final class ContactListViewController: UIViewController {
                                tableViewDelegate: self)
     }()
 
-    private(set) var contactList: [ContactEntity] = []
+    private(set) var contactList: [ContactEntityNew] = []
 
     var presenter: ContactListPresenterProtocol
 
@@ -66,7 +66,7 @@ extension ContactListViewController: UITableViewDelegate {
 }
 
 extension ContactListViewController: ContactListPresenterDelegate {
-    func showData(_ contactList: [ContactEntity]) {
+    func showData(_ contactList: [ContactEntityNew]) {
         self.contactList = contactList
         self.contentView.loadData()
     }

@@ -76,7 +76,7 @@ final class ActivityDetailsView: UIView {
         return label
     }()
 
-    let reportIssueButton: UIButton = {
+    lazy var reportIssueButton: UIButton = {
 
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false

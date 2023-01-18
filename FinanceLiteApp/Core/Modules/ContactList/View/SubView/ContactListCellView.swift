@@ -69,7 +69,7 @@ final class ContactCellView: UITableViewCell {
         contactPhoneLabel.text = ""
     }
 
-    func setupCell(contact: ContactEntity) {
+    func setupCell(contact: ContactEntityNew) {
         contactNameLabel.text = contact.name
         contactPhoneLabel.text = contact.phone
     }
