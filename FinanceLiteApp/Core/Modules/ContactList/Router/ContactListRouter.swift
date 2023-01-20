@@ -11,18 +11,21 @@ typealias ContactListInterable = ContactListPresenterProtocol & ContactListInter
 
 final class ContactListRouter: ContactListRouterProtocol {
     
+    weak var viewController: UIViewController?
+    
     static func createModule() -> UIViewController {
         let service = FinanceService()
         let interactor = ContactListInteractor(service: service)
         let router = ContactListRouter()
-        let presenter: ContactListInterable = ContactListPresenter(
+        var presenter: ContactListInterable = ContactListPresenter(
             interactor: interactor,
             router: router
         )
         
-        let viewController = ContactListViewController(presenter: presenter)
-        viewController.presenter.view = viewController
-        viewController.presenter.interactor.presenter = presenter
+        let viewController: ContactListViewController = ContactListViewController(presenter: presenter)
+        router.viewController = viewController
+        presenter.view = viewController
+        interactor.presenter = presenter
         
         return viewController
     }
