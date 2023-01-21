@@ -38,7 +38,7 @@ enum ContactListErrorMock: Error {
 final class ContactListPresenterDelegateSpy: ContactListPresenterDelegate {
 
     private(set) var showDataCalled = false
-    func showData(_ contactList: [ContactEntity]) {
+    func showData(_ contactList: [ContactEntityNew]) {
         showDataCalled = true
     }
 

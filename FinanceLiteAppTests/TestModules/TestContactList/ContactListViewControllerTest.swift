@@ -25,7 +25,7 @@ final class ContactListViewControllerTests: XCTestCase {
     func test_showData() {
         XCTAssertEqual(sut.contactList.count, 0)
 
-        sut.showData([ContactEntity(name: "", phone: "")])
+        sut.showData([ContactEntityNew()])
 
         XCTAssertEqual(sut.contactList.count, 1)
     }

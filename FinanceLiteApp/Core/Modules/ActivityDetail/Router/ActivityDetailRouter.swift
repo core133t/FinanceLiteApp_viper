@@ -11,19 +11,22 @@ typealias ActivityDetailsInterable = ActivityDetailsPresenterProtocol & Activity
 
 final class ActivityDetailsRouter: ActivityDetailsRouterProtocol {
     
+    weak var viewController: UIViewController?
+    
     static func createModule() -> UIViewController {
-        
-        let interactor: ActivityDetailsInteractorProtocol = ActivityDetailsInteractor()
-        
-        let router: ActivityDetailsRouterProtocol = ActivityDetailsRouter()
-        
-        let presenter: ActivityDetailsInterable = ActivityDetailsPresenter(interactor: interactor, router: router)
-
-        let viewController = ActivityDetailsViewController(presenter: presenter)
-        
-        viewController.presenter.view = viewController
-        viewController.presenter.interactor.presenter = presenter
-        
+        let service = FinanceService()
+        let interactor = ActivityDetailsInteractor(/*service: service*/)
+        let router = ActivityDetailsRouter()
+        var presenter: ActivityDetailsInterable = ActivityDetailsPresenter(
+            interactor: interactor,
+            router: router
+        )
+            
+        let viewController: ActivityDetailsViewController = ActivityDetailsViewController(presenter: presenter)
+        router.viewController = viewController
+        presenter.view = viewController
+        interactor.presenter = presenter
+            
         return viewController
     }
 }
