@@ -10,8 +10,10 @@ import UIKit
 final class ActivityDetailsViewController: UIViewController {
     
     var presenter: ActivityDetailsPresenterProtocol
+    //private var activity: ActivityEntity
     
     lazy var activityDetailsView: ActivityDetailsView = {
+        var activity: ActivityEntity
         let view: ActivityDetailsView = ActivityDetailsView()
         view.delegate = self
         return view
@@ -43,14 +45,19 @@ final class ActivityDetailsViewController: UIViewController {
 }
 
 extension ActivityDetailsViewController: ActivityDetailsPresenterDelegate {
+    func showData(activity: ActivityEntity) {
+        activityDetailsView.setupWithActivity(activity)
+    }
+    
     func didReportProblem() {
         showAlert(title: "Problem Reported", message: "Your problem has been reported successfully!")
     }
-    
+    /*
     func showData() {
         
         print("Here is your data, View!")
     }
+     */
 }
 
 extension ActivityDetailsViewController: ActivityDetailsViewDelegate {

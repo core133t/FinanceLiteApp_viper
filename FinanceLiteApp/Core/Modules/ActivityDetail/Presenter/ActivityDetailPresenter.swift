@@ -9,7 +9,7 @@ import Foundation
 
 protocol ActivityDetailsPresenterDelegate: AnyObject {
     func didReportProblem()
-    func showData()
+    func showData(activity: ActivityEntity)
 }
 
 final class ActivityDetailsPresenter: ActivityDetailsPresenterProtocol {
@@ -38,8 +38,8 @@ extension ActivityDetailsPresenter: ActivityDetailsInteractorDelegate {
         view?.didReportProblem()
     }
     
-    func didFetchData() {
-        view?.showData()
+    func didFetchData(activity: ActivityEntity) {
+        view?.showData(activity: activity)
     }
 }
 

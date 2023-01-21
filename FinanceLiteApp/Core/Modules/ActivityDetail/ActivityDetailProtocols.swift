@@ -19,7 +19,7 @@ protocol ActivityDetailsPresenterProtocol {
 
 protocol ActivityDetailsRouterProtocol {
     
-    static func createModule() -> UIViewController
+    static func createModule(activity: ActivityEntity) -> UIViewController
 }
 
 protocol ActivityDetailsInteractorProtocol {

@@ -13,13 +13,13 @@ protocol HomePresenterProtocol {
     var router: HomeRouterProtocol { get set }
     
     func viewDidLoad()
-    func navigateToActivity()
+    func navigateToActivity(activity: ActivityEntity)
     func navigateToUserProfile()
 }
 
 protocol HomeRouterProtocol {
     static func createModule() -> UIViewController
-    func navigateToActivity()
+    func navigateToActivity(activity: ActivityEntity)
     func navigateToUserProfile()
 }
 

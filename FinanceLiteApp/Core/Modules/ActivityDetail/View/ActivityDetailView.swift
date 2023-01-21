@@ -41,7 +41,8 @@ final class ActivityDetailsView: UIView {
         let label = UILabel()
         label.text = "Mall"
         label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: 17)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.lineBreakMode = .byClipping
         return label
     }()
 
@@ -115,14 +116,21 @@ final class ActivityDetailsView: UIView {
             timeLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 8),
             timeLabel.centerXAnchor.constraint(equalTo: priceLabel.centerXAnchor),
 
-            imageView.heightAnchor.constraint(equalToConstant: 100),
-            imageView.widthAnchor.constraint(equalToConstant: 100),
+            imageView.heightAnchor.constraint(equalToConstant: 150),
+            imageView.widthAnchor.constraint(equalToConstant: 150),
 
             reportIssueButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
             reportIssueButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
             reportIssueButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
             reportIssueButton.heightAnchor.constraint(equalToConstant: 56)
         ])
+    }
+    
+    func setupWithActivity(_ activity: ActivityEntity) {
+        activityNameLabel.text = activity.name
+        priceLabel.text = "$\(activity.price)"
+        timeLabel.text = "\(activity.time)"
+        imageView.image = UIImage(named: "\(activity.imageTag)")
     }
 
     @available(*, unavailable)

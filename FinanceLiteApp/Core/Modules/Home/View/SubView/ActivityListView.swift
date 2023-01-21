@@ -7,7 +7,7 @@ import UIKit
 
 protocol ActivityListViewDelegate: AnyObject {
 
-    func didSelectedActivity()
+    func didSelectedActivity(activity: ActivityEntity)
 }
 
 class ActivityListView: UIView {
@@ -78,9 +78,7 @@ extension ActivityListView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ActivityCellView
-        
         let activity = items[indexPath.row]
-        
         cell.setupWithActivity(activity)
 
         return cell
@@ -95,7 +93,7 @@ extension ActivityListView: UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
-        delegate?.didSelectedActivity()
+        let activity =  items[indexPath.row]
+        delegate?.didSelectedActivity(activity: activity)
     }
 }

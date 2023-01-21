@@ -8,16 +8,21 @@
 import Foundation
 
 protocol ActivityDetailsInteractorDelegate: AnyObject {
-    func didFetchData()
+    func didFetchData(activity: ActivityEntity)
     func didReportProblem()
 }
 
 final class ActivityDetailsInteractor: ActivityDetailsInteractorProtocol {
     
     weak var presenter: ActivityDetailsInteractorDelegate?
+    private var activity: ActivityEntity
+    
+    init(activity: ActivityEntity) {
+        self.activity = activity
+    }
     
     func fetchData() {
-        presenter?.didFetchData()
+        presenter?.didFetchData(activity: activity)
     }
     
     func reportProblem() {

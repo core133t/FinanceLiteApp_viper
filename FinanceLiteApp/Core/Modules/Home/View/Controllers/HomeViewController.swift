@@ -51,8 +51,8 @@ final class HomeViewController: UIViewController {
 // MARK: Extensions
 
 extension HomeViewController: HomeViewDelegate {
-    func didSelectActivity() {
-        presenter.navigateToActivity()
+    func didSelectActivity(activity: ActivityEntity) {
+        presenter.navigateToActivity(activity: activity)
     }
 }
 

@@ -13,9 +13,9 @@ final class ActivityDetailsRouter: ActivityDetailsRouterProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule() -> UIViewController {
-        let service = FinanceService()
-        let interactor = ActivityDetailsInteractor(/*service: service*/)
+    static func createModule(activity: ActivityEntity) -> UIViewController {
+        //let service = FinanceService()
+        let interactor = ActivityDetailsInteractor(activity: activity)
         let router = ActivityDetailsRouter()
         var presenter: ActivityDetailsInterable = ActivityDetailsPresenter(
             interactor: interactor,

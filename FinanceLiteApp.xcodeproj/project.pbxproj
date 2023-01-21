@@ -595,8 +595,8 @@
 				D1A7D36F2953F31100563FC4 /* View */,
 				D1A7D36D2953F2E300563FC4 /* Interactor */,
 				D1A7D36E2953F2F200563FC4 /* Presenter */,
-				D1A7D3702953F33B00563FC4 /* Entity */,
 				D1A7D36C2953F2DA00563FC4 /* Router */,
+				D1A7D3702953F33B00563FC4 /* Entity */,
 			);
 			path = Home;
 			sourceTree = "<group>";

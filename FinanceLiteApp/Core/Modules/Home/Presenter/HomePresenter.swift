@@ -31,8 +31,8 @@ final class HomePresenter: HomePresenterProtocol {
         interactor.didFetchData()
     }
     
-    func navigateToActivity() {
-        router.navigateToActivity()
+    func navigateToActivity(activity: ActivityEntity) {
+        router.navigateToActivity(activity: activity)
     }
     
     func navigateToUserProfile() {

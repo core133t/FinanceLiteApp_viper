@@ -30,8 +30,8 @@ final class HomeRouter: HomeRouterProtocol {
         return viewController
     }
     
-    func navigateToActivity() {
-        let viewController = ActivityDetailsRouter.createModule()
+    func navigateToActivity(activity: ActivityEntity) {
+        let viewController = ActivityDetailsRouter.createModule(activity: activity)
         self.viewController?.show(viewController, sender: self)
     }
     

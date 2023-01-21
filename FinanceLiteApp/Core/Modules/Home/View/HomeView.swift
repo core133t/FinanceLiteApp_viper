@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: Protocols
 protocol HomeViewDelegate: AnyObject {
-    func didSelectActivity()
+    func didSelectActivity(activity: ActivityEntity)
 }
 
 // MARK: Class
@@ -65,10 +65,10 @@ final class HomeView: UIView {
     }
     func setupWithHomeData(_ homeEntity: HomeEntity) {
         // Header
-        /*
-        homeHeaderView.label.text = homeData.balance
-        homeHeaderView.savingsValueLabel.text = homeData.savings
-        homeHeaderView.spendingValueLabel.text = homeData.spending
+        /*Need to complete
+        homeHeaderView.label.text = String(homeEntity.balance)
+        homeHeaderView.savingsValueLabel.text = String(homeEntity.savings)
+        homeHeaderView.spendingValueLabel.text = String(homeEntity.spending)
         */
         // List
         activityListView.items = homeEntity.listActivity
@@ -77,8 +77,8 @@ final class HomeView: UIView {
 
 // MARK: Extensions
 extension HomeView: ActivityListViewDelegate {
-
-    func didSelectedActivity() {
-        delegate?.didSelectActivity()
+    
+    func didSelectedActivity(activity: ActivityEntity) {
+        delegate?.didSelectActivity(activity: activity)
     }
 }
