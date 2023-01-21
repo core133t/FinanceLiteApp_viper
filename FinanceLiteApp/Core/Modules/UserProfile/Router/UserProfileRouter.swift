@@ -11,18 +11,21 @@ typealias UserProfileInterable = UserProfilePresenterProtocol & UserProfileInter
 
 final class UserProfileRouter: UserProfileRouterProtocol {
     
+    weak var viewController: UIViewController?
+    
     static func createModule() -> UIViewController {
-        let service: FinanceService = .init()
+        let service = FinanceService()
         let interactor = UserProfileInteractor(service: service)
         let router = UserProfileRouter()
-        let presenter: UserProfileInterable = UserProfilePresenter(
+        var presenter: UserProfileInterable = UserProfilePresenter(
             interactor: interactor,
             router: router
         )
         
-        let viewController = UserProfileViewController(presenter: presenter)
-        viewController.presenter.view = viewController
-        viewController.presenter.interactor.presenter = presenter
+        let viewController: UserProfileViewController = UserProfileViewController(presenter: presenter)
+        router.viewController = viewController
+        presenter.view = viewController
+        interactor.presenter = presenter
         
         return viewController
     }

@@ -17,9 +17,10 @@ final class HomeViewTests: XCTestCase {
         super.setUp()
         sut.delegate = homeViewDelegateSpy
     }
-
+    
     func test_didSelectedActivity() {
-        sut.didSelectedActivity()
+        sut.didSelectedActivity(activity: ActivityEntity(name: "name", price: 1, time: "time", imageTag: "image"))
+                                
         XCTAssertTrue(homeViewDelegateSpy.didSelectActivityCalled)
     }
 }
@@ -27,7 +28,8 @@ final class HomeViewTests: XCTestCase {
 final class HomeViewDelegateSpy: HomeViewDelegate {
 
     private(set) var didSelectActivityCalled = false
-    func didSelectActivity() {
+    
+    func didSelectActivity(activity: ActivityEntity) {
         didSelectActivityCalled = true
     }
 

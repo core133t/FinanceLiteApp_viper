@@ -22,11 +22,6 @@ final class ContactListInteractorTests: XCTestCase {
         sut.fetchData()
         XCTAssertTrue(presenterSpy.didFetchDataCalled)
     }
-    /*
-    func test_fetchData_returned_error() {
-        sut.fetchData()
-        XCTAssertFalse(presenterSpy.didFetchDataCalled)
-    }*/
 }
 
 final class ContactListInteractorDelegateSpy: ContactListInteractorDelegate {

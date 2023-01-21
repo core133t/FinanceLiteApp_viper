@@ -10,17 +10,20 @@ import UIKit
 typealias ConfirmationInterable = ConfirmationPresenterProtocol
 
 final class ConfirmationRouter: ConfirmationRouterProtocol {
+    
+    weak var viewController: UIViewController?
 
     static func createModule(confirmation: ConfirmationEntity) -> UIViewController {
-        let router: ConfirmationRouterProtocol = ConfirmationRouter()
+        let router = ConfirmationRouter()
 
-        let presenter: ConfirmationInterable = ConfirmationPresenter(
+        var presenter: ConfirmationInterable = ConfirmationPresenter(
             router: router,
             confirmation: confirmation
         )
 
         let viewController = ConfirmationViewController(presenter: presenter)
-        viewController.presenter.view = viewController
+        router.viewController = viewController
+        presenter.view = viewController
 
         return viewController
     }

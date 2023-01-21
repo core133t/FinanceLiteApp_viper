@@ -65,11 +65,9 @@ final class HomeView: UIView {
     }
     func setupWithHomeData(_ homeEntity: HomeEntity) {
         // Header
-        /*Need to complete
-        homeHeaderView.label.text = String(homeEntity.balance)
-        homeHeaderView.savingsValueLabel.text = String(homeEntity.savings)
-        homeHeaderView.spendingValueLabel.text = String(homeEntity.spending)
-        */
+        homeHeaderView.label.text = "$\(homeEntity.balance)"
+        homeHeaderView.savingsValueLabel.text = "$\(homeEntity.savings)"
+        homeHeaderView.spendingValueLabel.text = "$\(homeEntity.spending)"
         // List
         activityListView.items = homeEntity.listActivity
     }

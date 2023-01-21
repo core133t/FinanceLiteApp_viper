@@ -9,27 +9,42 @@ import XCTest
 @testable import FinanceLiteApp
 
 final class HomeViewControllerTests: XCTestCase {
-
+    
     private let presenterSpy = HomePresenterProtocolSpy()
     private lazy var navigationControllerSpy = NavigationControllerSpy()
     private lazy var sut = HomeViewController(presenter: presenterSpy)
-
+    
     func test_loadView() {
         sut.loadView()
         XCTAssertFalse(presenterSpy.viewDidLoadCalled)
     }
-
+    
     func test_viewDidLoad() {
         sut.viewDidLoad()
         XCTAssertTrue(presenterSpy.viewDidLoadCalled)
     }
+    
+    func test_openProfile() {
+        sut.openProfile()
+        XCTAssertTrue(presenterSpy.navigateUserProfileCalled)
+    }
+    
+    func test_didSelectActivity() {
+        sut.didSelectActivity(activity: ActivityEntity(name: "name", price: 1, time: "time", imageTag: "image"))
+        XCTAssertTrue(presenterSpy.navigateToActivityCalled)
+    }
 }
 
 final class HomePresenterProtocolSpy: HomePresenterProtocol {
-    func navigateToActivity() {
+    
+    private(set) var navigateToActivityCalled = false
+    func navigateToActivity(activity: ActivityEntity) {
+        navigateToActivityCalled = true
     }
     
+    private(set) var navigateUserProfileCalled = false
     func navigateToUserProfile() {
+        navigateUserProfileCalled = true
     }
     
 
@@ -55,7 +70,7 @@ final class HomeInteractorProtocolSpy: HomeInteractorProtocol {
 
 }
 final class HomeRouterProtocolSpy: HomeRouterProtocol {
-    func navigateToActivity() {
+    func navigateToActivity(activity: ActivityEntity) {
     }
     
     func navigateToUserProfile() {

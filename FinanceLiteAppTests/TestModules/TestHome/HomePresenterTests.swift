@@ -24,6 +24,12 @@ final class HomePresenterTests: XCTestCase {
         sut.viewDidLoad()
         XCTAssertTrue(interactorSpy.didFetchDataCalled)
     }
+    
+    func test_didFetchData() {
+        let activity = [ActivityEntity]()
+        sut.didFetchData(activityList: HomeEntity(balance: 1, savings: 1, spending: 1, listActivity: activity))
+        XCTAssertTrue(viewContollerSpy.showDataCalled)
+    }
 }
 
 final class HomePresenterDelegateSpy: HomePresenterDelegate {

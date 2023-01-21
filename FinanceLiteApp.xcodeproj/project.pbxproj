@@ -14,6 +14,7 @@
 		D1069E732952823C005D03A4 /* FinanceLiteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1069E722952823C005D03A4 /* FinanceLiteAppUITests.swift */; };
 		D1069E752952823C005D03A4 /* FinanceLiteAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1069E742952823C005D03A4 /* FinanceLiteAppUITestsLaunchTests.swift */; };
 		D1069E962953AE99005D03A4 /* ContactListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1069E952953AE99005D03A4 /* ContactListProtocols.swift */; };
+		D16A3CFB297CA6FB007FC3AF /* HomeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A3CFA297CA6FB007FC3AF /* HomeInteractorTest.swift */; };
 		D1A162D72955335E000EFE77 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162D62955335E000EFE77 /* HomePresenterTests.swift */; };
 		D1A162DD29553423000EFE77 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162DC29553423000EFE77 /* HomeViewControllerTests.swift */; };
 		D1A162DF2955398E000EFE77 /* HomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162DE2955398E000EFE77 /* HomeRouterTests.swift */; };
@@ -126,6 +127,7 @@
 		D1069E722952823C005D03A4 /* FinanceLiteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceLiteAppUITests.swift; sourceTree = "<group>"; };
 		D1069E742952823C005D03A4 /* FinanceLiteAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceLiteAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D1069E952953AE99005D03A4 /* ContactListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListProtocols.swift; sourceTree = "<group>"; };
+		D16A3CFA297CA6FB007FC3AF /* HomeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTest.swift; sourceTree = "<group>"; };
 		D1A162D62955335E000EFE77 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		D1A162DC29553423000EFE77 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		D1A162DE2955398E000EFE77 /* HomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterTests.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				D1A162D62955335E000EFE77 /* HomePresenterTests.swift */,
 				D1A162DE2955398E000EFE77 /* HomeRouterTests.swift */,
 				D1A16524296EDF78000EFE77 /* HomeViewTest.swift */,
+				D16A3CFA297CA6FB007FC3AF /* HomeInteractorTest.swift */,
 			);
 			path = TestHome;
 			sourceTree = "<group>";
@@ -1053,6 +1056,7 @@
 				D1A1630E29555B9B000EFE77 /* TransferInteractorTest.swift in Sources */,
 				D1A162D72955335E000EFE77 /* HomePresenterTests.swift in Sources */,
 				D1A16523296EDE53000EFE77 /* ConfirmationViewControllerTest.swift in Sources */,
+				D16A3CFB297CA6FB007FC3AF /* HomeInteractorTest.swift in Sources */,
 				D1A16516296DC5BB000EFE77 /* ContactListViewControllerTest.swift in Sources */,
 				D1A1651C296DC61D000EFE77 /* ContactListPresenterTest.swift in Sources */,
 				D1A162DD29553423000EFE77 /* HomeViewControllerTests.swift in Sources */,
