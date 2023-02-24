@@ -54,7 +54,7 @@ final class HomeView: UIView {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: -150),
+            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),//(-150) can add constant if need
             activityListView.heightAnchor.constraint(equalToConstant: estimatedHeight)
         ])
     }

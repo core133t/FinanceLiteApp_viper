@@ -39,6 +39,7 @@ extension SplashRouter: SplashRouterProtocol {
             guard let window = viewController?.view.window else { return }
             let listVC = TabBarController()
             let navigationController = UINavigationController(rootViewController: listVC)
+            navigationController.isNavigationBarHidden = true // delete if you need white bar in the top of home view
             window.rootViewController = navigationController
         }
     }
