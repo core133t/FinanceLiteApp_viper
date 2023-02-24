@@ -131,6 +131,7 @@ final class ActivityDetailsView: UIView {
         priceLabel.text = "$\(activity.price)"
         timeLabel.text = "\(activity.time)"
         imageView.image = UIImage(named: "\(activity.imageTag)")
+        imageView.tintColor = ImageColor.defineImageColor(activity.imageTag)
     }
 
     @available(*, unavailable)

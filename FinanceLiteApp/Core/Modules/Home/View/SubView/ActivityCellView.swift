@@ -70,6 +70,7 @@ class ActivityCellView: UITableViewCell {
         activityNameLabel.text = activity.name
         activityInfoLabel.text = "$\(activity.price) • \(activity.time)"
         categoryImageView.image = UIImage(named: "\(activity.imageTag)")
+        categoryImageView.tintColor = ImageColor.defineImageColor(activity.imageTag)
     }
 }
 

@@ -14,6 +14,7 @@
 		D1069E732952823C005D03A4 /* FinanceLiteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1069E722952823C005D03A4 /* FinanceLiteAppUITests.swift */; };
 		D1069E752952823C005D03A4 /* FinanceLiteAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1069E742952823C005D03A4 /* FinanceLiteAppUITestsLaunchTests.swift */; };
 		D1069E962953AE99005D03A4 /* ContactListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1069E952953AE99005D03A4 /* ContactListProtocols.swift */; };
+		D142CCA829A96548003E04CF /* DefineImageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D142CCA729A96548003E04CF /* DefineImageColor.swift */; };
 		D16A3CFB297CA6FB007FC3AF /* HomeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16A3CFA297CA6FB007FC3AF /* HomeInteractorTest.swift */; };
 		D1A162D72955335E000EFE77 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162D62955335E000EFE77 /* HomePresenterTests.swift */; };
 		D1A162DD29553423000EFE77 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A162DC29553423000EFE77 /* HomeViewControllerTests.swift */; };
@@ -127,6 +128,7 @@
 		D1069E722952823C005D03A4 /* FinanceLiteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceLiteAppUITests.swift; sourceTree = "<group>"; };
 		D1069E742952823C005D03A4 /* FinanceLiteAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceLiteAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D1069E952953AE99005D03A4 /* ContactListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListProtocols.swift; sourceTree = "<group>"; };
+		D142CCA729A96548003E04CF /* DefineImageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineImageColor.swift; sourceTree = "<group>"; };
 		D16A3CFA297CA6FB007FC3AF /* HomeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTest.swift; sourceTree = "<group>"; };
 		D1A162D62955335E000EFE77 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		D1A162DC29553423000EFE77 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 			children = (
 				D1A16530296F2B57000EFE77 /* AlertView.swift */,
 				D1A1653C297700B9000EFE77 /* Errors.swift */,
+				D142CCA729A96548003E04CF /* DefineImageColor.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1032,6 +1035,7 @@
 				D1A7D3D62954128A00563FC4 /* SplashInteractor.swift in Sources */,
 				D1A7D3A32953FBF800563FC4 /* HTTPClient.swift in Sources */,
 				D1A7D3982953F8E400563FC4 /* ActivityDetailProtocols.swift in Sources */,
+				D142CCA829A96548003E04CF /* DefineImageColor.swift in Sources */,
 				D1A7D3922953F86400563FC4 /* ActivityDetailPresenter.swift in Sources */,
 				D1A7D3602953F0C400563FC4 /* TransferView.swift in Sources */,
 			);
