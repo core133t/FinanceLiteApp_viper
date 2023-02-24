@@ -10,4 +10,5 @@ import Foundation
 struct AccountEntity: Decodable {
     let agency: String
     let account: String
+    let bank: String
 }

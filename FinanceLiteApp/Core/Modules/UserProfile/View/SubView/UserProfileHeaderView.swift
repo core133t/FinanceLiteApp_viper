@@ -32,7 +32,7 @@ class UserProfileHeaderView: UIView {
     let nameLabel: UILabel = {
 
         let label = UILabel()
-        label.text = "Dmitry Loginov"
+        label.text = "Name SecondName"
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 17)
         return label
@@ -41,7 +41,7 @@ class UserProfileHeaderView: UIView {
     let agencyLabel: UILabel = {
 
         let label = UILabel()
-        label.text = "Agency 1337"
+        label.text = "Agency 0000"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 15)
         return label
@@ -60,7 +60,7 @@ class UserProfileHeaderView: UIView {
 
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Gazprom Bank"
+        label.text = "Your Bank"
         label.font = UIFont.systemFont(ofSize: 15)
 
         return label

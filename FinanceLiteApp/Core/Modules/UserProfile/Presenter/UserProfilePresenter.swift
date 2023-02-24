@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UserProfilePresenterDelegate: AnyObject {
-    func showData()
+    func showData(_ userProfile: UserEntity)
 }
 
 final class UserProfilePresenter: UserProfilePresenterProtocol {
@@ -33,7 +33,7 @@ final class UserProfilePresenter: UserProfilePresenterProtocol {
 extension UserProfilePresenter: UserProfileInteractorDelegate {
 
     func didFetchData(_ userProfile: UserEntity) {
-        view?.showData()
+        view?.showData(userProfile)
     }
 
 }

@@ -52,12 +52,6 @@ extension ActivityDetailsViewController: ActivityDetailsPresenterDelegate {
     func didReportProblem() {
         showAlert(title: "Problem Reported", message: "Your problem has been reported successfully!")
     }
-    /*
-    func showData() {
-        
-        print("Here is your data, View!")
-    }
-     */
 }
 
 extension ActivityDetailsViewController: ActivityDetailsViewDelegate {

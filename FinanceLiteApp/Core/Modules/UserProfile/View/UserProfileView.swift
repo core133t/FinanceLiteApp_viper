@@ -8,17 +8,26 @@
 import UIKit
 
 class UserProfileView: UIView {
-
+    
+    var itemsForList: [String] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    let userHeaderView: UserProfileHeaderView = {
+        let userHeaderView = UserProfileHeaderView()
+        userHeaderView.frame = CGRect(x: 0, y: 0, width: 0, height: 232)
+        return userHeaderView
+    }()
+    
     private lazy var tableView: UITableView = {
         //style: .InsertGroup in ios13
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.dataSource = self
-
-        let headerView = UserProfileHeaderView()
-        headerView.frame = CGRect(x: 0, y: 0, width: 0, height: 232)
-        tableView.tableHeaderView = headerView
+        tableView.tableHeaderView = userHeaderView
         return tableView
     }()
 
@@ -39,6 +48,18 @@ class UserProfileView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupWithUserProfileData(_ userEntity: UserEntity) {
+        //Header
+        userHeaderView.nameLabel.text = "\(userEntity.name)"
+        userHeaderView.agencyLabel.text = "Agency \(userEntity.account.agency)"
+        userHeaderView.accountLabel.text = "Account \(userEntity.account.account)"
+        userHeaderView.bankLabel.text = "\(userEntity.account.bank)"
+        //List
+        itemsForList.append("\(userEntity.phone)")
+        itemsForList.append("\(userEntity.email)")
+        itemsForList.append("\(userEntity.address)")
     }
 }
 
@@ -62,18 +83,23 @@ extension UserProfileView: UITableViewDataSource {
         case 0:
 
             cell.textLabel?.text = "Phone"
-            cell.detailTextLabel?.text = "+55 (11) 99999-9999"
+            cell.detailTextLabel?.text = "+5(555)555-55-55"
         case 1:
 
             cell.textLabel?.text = "E-mail"
-            cell.detailTextLabel?.text = "user@devpass.com"
+            cell.detailTextLabel?.text = "youremail@e-mail.com"
         case 2:
 
             cell.textLabel?.text = "Address"
-            cell.detailTextLabel?.text = "Rua Bela Cintra, 495"
+            cell.detailTextLabel?.text = "Your Address, 495"
         default:
             break
         }
+
+        if itemsForList.count > 0 {
+            cell.detailTextLabel?.text = itemsForList[indexPath.row]
+        }
+
         return cell
     }
 

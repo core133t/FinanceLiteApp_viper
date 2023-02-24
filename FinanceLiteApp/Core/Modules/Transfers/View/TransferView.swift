@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 protocol TransferViewDelegate: AnyObject {
     
     func didPressChooseContactButton()

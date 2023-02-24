@@ -54,7 +54,7 @@ final class HomeView: UIView {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
+            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: -150),
             activityListView.heightAnchor.constraint(equalToConstant: estimatedHeight)
         ])
     }
@@ -63,6 +63,7 @@ final class HomeView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     func setupWithHomeData(_ homeEntity: HomeEntity) {
         // Header
         homeHeaderView.label.text = "$\(homeEntity.balance)"

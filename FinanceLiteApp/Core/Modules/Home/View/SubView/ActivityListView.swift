@@ -6,7 +6,6 @@
 import UIKit
 
 protocol ActivityListViewDelegate: AnyObject {
-
     func didSelectedActivity(activity: ActivityEntity)
 }
 

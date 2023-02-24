@@ -11,6 +11,11 @@ final class UserProfileViewController: UIViewController {
     
     var presenter: UserProfilePresenterProtocol
     
+    private lazy var userProfileView: UserProfileView = {
+        let userProfileView = UserProfileView()
+        return userProfileView
+    }()
+    
     init(presenter: UserProfilePresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -22,7 +27,7 @@ final class UserProfileViewController: UIViewController {
     }
     
     override func loadView() {
-        self.view = UserProfileView()
+        self.view = userProfileView
     }
     
     override func viewDidLoad() {
@@ -33,8 +38,7 @@ final class UserProfileViewController: UIViewController {
 }
 
 extension UserProfileViewController: UserProfilePresenterDelegate {
-    
-    func showData() {
+    func showData(_ userProfile: UserEntity) {
+        userProfileView.setupWithUserProfileData(userProfile)
     }
-    
 }

@@ -5,7 +5,7 @@
 //  Created by Dmitry Loginov on 22.12.2022.
 //
 
-import UIKit
+import Foundation
 
 protocol TransfersPresenterDelegate: AnyObject {
     func showData(transfer: TransfersEntity)

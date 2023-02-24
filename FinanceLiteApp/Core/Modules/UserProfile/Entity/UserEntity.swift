@@ -12,6 +12,6 @@ struct UserEntity: Decodable {
     let phone: String
     let email: String
     let address: String
-    let account: AccountEntity?
+    let account: AccountEntity
 }
 
